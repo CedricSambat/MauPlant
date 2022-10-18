@@ -1,0 +1,8 @@
+Welcome to plants index
+
+<ul>
+  <% @plants.each do |plant| %>
+    <li><%= plant.name %></li>
+    <%= link_to "Show More", plant_path(plant), class: "btn btn-outline-success"%>
+  <% end %>
+</ul>
