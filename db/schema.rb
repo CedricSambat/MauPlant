@@ -35,7 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_072845) do
   end
 
   create_table "plants", force: :cascade do |t|
-    t.text "name"
+    t.string "name"
     t.text "description"
     t.string "category"
     t.datetime "created_at", null: false
