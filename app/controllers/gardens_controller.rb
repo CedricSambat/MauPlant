@@ -6,7 +6,7 @@ class GardensController < ApplicationController
   end
 
   def show
-    # @garden = Plant.find(params[:id])
+    @garden = Garden.find(params[:id])
   end
 
   def edit

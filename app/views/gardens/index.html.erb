@@ -1,11 +1,5 @@
-<%@gardens.each do |garden| %>
-  <%=garden.latitude %>
+<%@gardens.each do |garden|%>
+ <%= garden.latitude %>
  <%=garden.longtude %>
  <%=garden.address %>
-<%end %>|
-
-<%= link_to "Delete cosplay",garden_path(@garden),
-
-data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
-<%= link_to "Update Cosplay", edit_garden_path(@garden), class: "btn btn-primary" %>
-<%# <%= link_to "book cosplay", new_cosplay_booking_path(@garden), class: "btn btn-primary" %> %>
+<%end%>
