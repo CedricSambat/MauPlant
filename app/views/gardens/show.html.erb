@@ -1,0 +1,8 @@
+Gardens
+<%= @garden.latitude %>
+<%= @garden.longtude %>
+<%= @garden.address %>
+
+<%= link_to "Delete Garden",garden_path(@garden),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
+<%= link_to "Update garden", edit_garden_path(@garden), class: "btn btn-primary" %>
