@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_18_072845) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_18_114215) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.text "name"
+    t.bigint "plant_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plant_id"], name: "index_categories_on_plant_id"
+  end
 
   create_table "garden_plants", force: :cascade do |t|
     t.datetime "reminder"
@@ -54,6 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_18_072845) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "categories", "plants"
   add_foreign_key "garden_plants", "gardens"
   add_foreign_key "garden_plants", "plants"
   add_foreign_key "gardens", "users"
