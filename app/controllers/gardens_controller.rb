@@ -1,8 +1,6 @@
 class GardensController < ApplicationController
-
   def index
     @gardens = Garden.all
-
   end
 
   def show
@@ -35,8 +33,9 @@ class GardensController < ApplicationController
   end
 
   private
+
   def garden_params
-    params.require(:garden).permit(:user, :latitude, :longtude ,:address)
+    params.require(:garden).permit(:user, :latitude, :longtude, :address, :name)
   end
 
   def set_list
