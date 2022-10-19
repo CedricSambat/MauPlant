@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
       @plants = Plants.where(categories: @categories)
     end
 
-    @categories = Categories.all
+    # @categories = Categories.all
   end
 
   def show
