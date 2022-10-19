@@ -1,13 +1,16 @@
-.cards {
+.cards{
+  height: 195px;
+  padding-top: 0px;
+  text-align: center;
+  margin: 25px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 10px;
 }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
 }
 
