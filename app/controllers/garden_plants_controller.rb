@@ -8,9 +8,9 @@ class GardenPlantsController < ApplicationController
 
   def create
     @garden_plant = garden_plant.new(garden_plant_params)
-    @garden_plant.list = @list
+    @garden_plant.list = @garden
     if @garden_plant.save
-      redirect_to list_path(@list)
+
     else
       render :new
     end
@@ -23,9 +23,9 @@ class GardenPlantsController < ApplicationController
 
   private
 
-  def garden_plant_params
-    params.require(:bookmark).permit(:comment, :movie_id)
-  end
+  # def garden_plant_params
+  #   params.require(:).permit()
+  # end
 
   def set_garden_plant
     @garden_plant = garden_plant.find(params[:id])
