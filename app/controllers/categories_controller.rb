@@ -6,24 +6,24 @@ class CategoriesController < ApplicationController
     if params[:query].present?
       @plants = Plants.where("name ILIKE ?", "%#{params[:query]}%")
 
-    # Preventing SQL Injection and Database error for
-    # unknown characters
-    # else
-    #   @plants = Plants.where(category: @category)
+     # Preventing SQL Injection and Database error for
+     # unknown characters
+     # else
+      @plants = Plants.where(categories: @categories)
     end
 
-    @Categories = Categorie.all
+    @categories = Categories.all
   end
 
   def show
-    @category = Category.find(params[:id])
+    @CategoriesController = Categories.find(params[:id])
     if params[:query].present?
-    @plants = Plants.where(category: @category).where("name ILIKE ?", "%#{params[:query]}%")
+    @plants = Plants.where(categories: @categories).where("name ILIKE ?", "%#{params[:query]}%")
     # Preventing SQL Injection and Database error for
     # unknown characters
 
     else
-      @plants = Plants.where(category: @category)
+      @plants = Plants.where(categories: @categories)
     end
   end
 end
