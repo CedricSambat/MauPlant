@@ -5,6 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+require "open-uri"
+
+puts "starting seeding"
+
+puts "cleaning database"
+
+user.destroy_all
+plant
 plant1 = Plant.create(name: "mango", description: "klsdvklsn", category:"fruit")
 plant1.save!
 
