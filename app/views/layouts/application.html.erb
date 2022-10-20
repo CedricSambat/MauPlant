@@ -12,8 +12,20 @@
 
   <body>
   <%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+  <%= render "shared/flashes" %>
 
-    <%= yield %>
+
+
+  <%= yield %>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+var typed = new Typed(".auto", {
+  strings: ["lamer","lakaz","plant"],
+  typeSpeed: 150,
+  backspeed: 150,
+  loop: true
+})
+</script>
+
   </body>
 </html>
