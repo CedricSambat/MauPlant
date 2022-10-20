@@ -1,10 +1,28 @@
 class GardensController < ApplicationController
   def index
     @gardens = Garden.all
+
+    if current_user.gardens
+      @gardens = Garden.all.where(user_id: current_user)
+    else
+      redirect_to "/gardens/new"
+    end
   end
 
   def show
     @garden = Garden.find(params[:id])
+    @plants = []
+    Plant.all.each do |plant|
+      GardenPlant.all.where(garden_id:params[:id]).each do |gplant|
+        if plant.id == gplant.plant_id
+          @plants << plant
+        end
+      end
+    end
+    # @garden_plants = GardenPlant.all.where(garden_id:params[:id])
+    # same as
+    # view garden show/@gardenplant .each
+    # add a new plant is a new garden plant in gatrden plants controller
   end
 
   def edit
