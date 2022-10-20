@@ -1,30 +1,22 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666162430/damla-sulama-sisteminde-borunun-onemi-1280x720_zc91of.jpg);">
-
-<div class="container">
-    <h1 class="mb-2" >Welcome to MauPlant</h1>
-    <p>All you need are here</p>
-
-      <%= form_with url: categories_path, method: :get, class: "d-flex" do %>
-       <%= text_field_tag :query,
-        params[:query],
-         class: "form-control",
-          placeholder: "Find your plant..."
-         %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
+<div class="wrapper">
+  <div class="card d-flex">
+    <div class="d-flex">
+      <div class="card_1">
+        <h1>MauPlant</h1>
+        <p>make your plant healthy</p>
+      </div>
+      <div class="card_2">card2
+// example
+      </div>
+    </div>
   </div>
 </div>
-
-<div class="cards">
-   <div class="card-cat" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666162430/damla-sulama-sisteminde-borunun-onemi-1280x720_zc91of.jpg)">
-    Plant
-  </div>
-
-  <div class="card-cat" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666181156/6859_Micro_20Irrigation_20Industry_v4fkkv.jpg)">
-    Garden
-  </div>
-
-   <div class="card-cat" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666162438/How-Does-Cold-Water-Affect-Plant-Health-Complete-Guide-1_fngiim.jpg)">
-    Help
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
 </div>
