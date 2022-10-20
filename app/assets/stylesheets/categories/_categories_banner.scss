@@ -1,8 +1,100 @@
-.banner
-{
-    object-position: center center;
-    background-size: cover;
-    background-position: center center;
-    padding: 120px 0px;
 
+.card_in {
+  height: 360px;
+  align-items: center;
+  background-color: #3a5a40;
+  justify-content: space-between;
+
+}
+// js anime
+.container{
+  align-items: center;
+  color: #F4F4F4;
+}
+.container h1{
+  font-size: 50px;
+  font-weight: 200;
+}
+span{
+  color: yellowgreen
+}
+.card_2{
+  background-size: cover;
+  background-position: left;
+  height: 166px;
+  width: 219px;
+  border-radius: 5px;
+}
+
+// cards btn
+.card_btn{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+}
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 20px;
+  width: 182px;
+  margin-left: 12px;
+}
+.card-category_g{
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 20px;
+  width: 395px;
+  margin-left: 9px;
+}
+// background
+.background{
+  background-size: cover;
+  background-position: center;
+  padding: 8px 0;
+  height: 500px;
+}
+// footer
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 92px;
+  color: rgba(0,0,0,0.3);
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
 }

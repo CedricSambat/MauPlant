@@ -12,7 +12,7 @@ puts "starting seeding"
 
 puts "cleaning database"
 
-User.destroy_all
+# User.destroy_all
 plant
 plant1 = Plant.create(name: "mango", description: "klsdvklsn", category:"fruit")
 plant1.save!
