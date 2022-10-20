@@ -2,6 +2,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  padding-top: 0px;
+  margin: 25px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3a5a40;
+}
+
+.card-cat {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px black;
 }
 
 // Smallest device
@@ -16,6 +31,8 @@
   .cards {
     grid-template-columns: 1fr;
   }
+
+
 }
 
 // Medium devices (tablets, 768px and up)
