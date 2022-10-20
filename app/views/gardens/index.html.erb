@@ -1,9 +1,8 @@
 <div class="d-flex flex-column mb-3">
   <% @gardens.each do |garden|%>
-  <%= garden.name %>
-  <%= link_to "Show More", garden_path(garden), class: "btn btn-outline-success"%>
-  <%= garden.latitude %>
-  <%=garden.longtude %>
-  <%=garden.address %>
+    <%= link_to garden_path(garden), class: "btn btn-outline-success" do %>
+      <%= garden.name %>
+    <% end %>
+   <%= link_to "create garden", new_garden_path %>
   <%end%>
 </div>

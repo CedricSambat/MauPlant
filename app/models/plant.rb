@@ -1,3 +1,3 @@
 class Plant < ApplicationRecord
-  has_many :garden_plants
+  belongs_to :garden
 end
