@@ -2,19 +2,23 @@ class GardenPlantsController < ApplicationController
   # before_action :set_garden_plants, only: :destroy
   # before_action :set_list, only: [:new, :create]
 
-  # def new
-  #   @garden_plant = garden_plant.new
-  # end
+  def new
+    @garden = Garden.find(params[:garden_id])
+    @garden_plant = GardenPlant.new
+    @plants = Plant.all
+  end
 
-  # def create
-  #   @garden_plant = garden_plant.new(garden_plant_params)
-  #   @garden_plant.list = @garden
-  #   if @garden_plant.save
+  def create
+    @garden = Garden.find(params[:garden_id])
+    @garden_plant = GardenPlant.new(garden_plant_params)
+    @garden_plant.garden = @garden
+    if @garden_plant.save!
+      redirect_to garden_path(@garden)
+    else
+      render :new, status: :unprocessable_entity
+    end
 
-  #   else
-  #     render :new
-  #   end
-  # end
+  end
 
   # def destroy
   #   @garden_plant.destroy
@@ -23,12 +27,12 @@ class GardenPlantsController < ApplicationController
 
   # private
 
-  # # def garden_plant_params
-  # #   params.require(:).permit()
-  # # end
+  def garden_plant_params
+    params.require(:garden_plant).permit(:garden_id, :plant_id)
+  end
 
-  # def set_garden_plant
-  #   @garden_plant = garden_plant.find(params[:id])
+  # def garden_plant_params
+  #   @garden_plant = Garden_plant.find(params[:id])
   # end
 
   # def set_list
