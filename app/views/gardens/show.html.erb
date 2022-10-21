@@ -1,9 +1,15 @@
-<%= @garden.name %>
 
-<% @plants.each do |plant|%>
-  <%= plant.name %>
-<% end %>
-
-<%= link_to "Delete Garden",garden_path(@garden),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
-<%= link_to "Add a plant", new_garden_garden_plant_path(@garden), class: "btn btn-primary" %>
+<div class="wrapper">
+  <div class="d-flex">
+    <%= @garden.name %>
+      <div class="card-plant">
+        <% @plants.each do |plant|%>
+        <%= plant.name %>
+        <% end %>
+       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      </div>
+  </div>
+    <%= link_to "Delete Garden",garden_path(@garden),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
+    <%= link_to "Add a plant", new_garden_garden_plant_path(@garden), class: "btn btn-primary" %>
+</div>
