@@ -106,7 +106,7 @@ plant16.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267962/240_F_169305319_ocVsDjvATOkwU1vnhXJcRGTzVehRVSr9_dq8zzw.jpg")
 plant17 = Plant.new(name: "Capcicum", description:"lorem ipsum", category:"vegetable")
-plant17.photo.attach(io: file, filename: "Capcicum.jpg", content_type: "image/jpg")
+plan17.photo.attach(io: file, filename: "Capcicum.jpg", content_type: "image/jpg")
 plant17.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267940/1000_F_240969248_tL666JKRYq8ecSiVTEehEesDW7Ss9YTt_xs4kes.jpg")
@@ -121,13 +121,13 @@ plant19.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267993/1000_F_277530247_iWPLqhh85Zsmfasd3w15NzmiZrX6U6W2_fvunde.jpg")
 plant20 = Plant.new(name: "Mint", description:"lorem ipsum", category:"vegetable")
-plant20.photo.attach(io: file, filename: "Mint.jpg", content_type: "image/jpg")
+plant20.photo.attach(io: file, filename: ".jpg", content_type: "image/jpg")
 
 plant20.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268003/fe61b5adb4f765f51ecc2fc15927d8c7_orhrnw.jpg")
 plant21 = Plant.new(name: "Marigold", description:"lorem ipsum", category:"flower")
-plant21.photo.attach(io: file, filename: "Marigold.jpg", content_type: "image/jpg")
+plant21.photo.attach(io: file, filename: ".jpg", content_type: "image/jpg")
 plant21.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268035/0a16e41dc98a48c11555375fcc9a1f0f_oethwk.png")
@@ -137,7 +137,7 @@ plant22.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268050/756e3e7e27f4278fc86d4d950c8a85fd_xluj6c.png")
 plant23 = Plant.new(name: "Hibiscus", description:"lorem ipsum", category:"flower")
-plant23.photo.attach(io: file, filename: "Roses.png", content_type: "image/jpg")
+plant.photo.attach(io: file, filename: "Roses.png", content_type: "image/jpg")
 plant23.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268080/3ce9f5af57c97bfdcd53cdb878c48ce9_nyd7u5.jpg")
