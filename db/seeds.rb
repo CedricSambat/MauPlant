@@ -13,11 +13,11 @@ puts "starting seeding"
 puts "cleaning database"
 
 
-User.destroy_all
+GardenPlant.destroy_all
 Plant.destroy_all
 Categorie.destroy_all
 Garden.destroy_all
-GardenPlant.destroy_all
+User.destroy_all
 
 user = User.create(email: 'test@gmail.com', password: '123456')
 
