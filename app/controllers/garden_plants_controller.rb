@@ -25,7 +25,7 @@ class GardenPlantsController < ApplicationController
   #   redirect_to list_path(@garden_plant.list), status: :see_other
   # end
 
-  # private
+  private
 
   def garden_plant_params
     params.require(:garden_plant).permit(:garden_id, :plant_id)
