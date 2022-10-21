@@ -1,36 +1,4 @@
 
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Start Your Journey","/gardens"%>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666162430/damla-sulama-sisteminde-borunun-onemi-1280x720_zc91of.jpg);">
-
-<div class="container">
-    <h1 class="mb-2" >Welcome to MauPlant</h1>
-    <p>All you need are here</p>
-
-      <%= form_with url: categories_path, method: :get, class: "d-flex" do %>
-       <%= text_field_tag :query,
-        params[:query],
-         class: "form-control",
-          placeholder: "Find your plant..."
-         %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
-
-<div class="cards">
-   <div class="card-cat" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666162430/damla-sulama-sisteminde-borunun-onemi-1280x720_zc91of.jpg)">
-    Plant
-  </div>
-
-  <div class="card-cat" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666181156/6859_Micro_20Irrigation_20Industry_v4fkkv.jpg)">
-    Garden
-  </div>
-
-   <div class="card-cat" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666162438/How-Does-Cold-Water-Affect-Plant-Health-Complete-Guide-1_fngiim.jpg)">
-    Help
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666287268/Mauplant/plants/scott-webb-hDyO6rr3kqk-unsplash_cxsrnb.jpg);">
   <div class="container">
     <h1>MauPlant <strong>keeps</strong> your <strong>plant alive</strong>!</h1>
