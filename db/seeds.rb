@@ -7,13 +7,14 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require "open-uri"
-
+GardenPlant.destroy_all
+Plant.destroy_all
+Garden.destroy_all
+User.destroy_all
 puts "starting seeding"
 
 puts "cleaning database"
 
-# User.destroy_all
-plant
 plant1 = Plant.create(name: "mango", description: "klsdvklsn", category:"fruit")
 plant1.save!
 
