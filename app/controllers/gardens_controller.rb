@@ -11,14 +11,14 @@ class GardensController < ApplicationController
 
   def show
     @garden = Garden.find(params[:id])
-    @plants = []
-    Plant.all.each do |plant|
-      GardenPlant.all.where(garden_id:params[:id]).each do |gplant|
-        if plant.id == gplant.plant_id
-          @plants << plant
-        end
-      end
-    end
+    @myplants = @garden.garden_plants
+    # Plant.all.each do |plant|
+    #   GardenPlant.all.where(garden_id:params[:id]).each do |gplant|
+    #     if plant.id == gplant.plant_id
+    #       @plants << plant
+    #     end
+    #   end
+    # end
     # @garden_plants = GardenPlant.all.where(garden_id:params[:id])
     # same as
     # view garden show/@gardenplant .each
@@ -47,7 +47,7 @@ class GardensController < ApplicationController
   def destroy
     @garden = Garden.find(params[:id])
     @garden.destroy
-    redirect_to garden_path(@garden), status: :see_other
+    redirect_to gardens_path, status: :see_other
   end
 
   private

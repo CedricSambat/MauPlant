@@ -1,9 +1,15 @@
 <%= @garden.name %>
+<br>
 
-<% @plants.each do |plant|%>
+<% @myplants.each do |myplant|%>
+  <% plant = myplant.plant %>
   <%= plant.name %>
+   <%= cl_image_tag plant.photo.key %>
+   <%= link_to "Remove Plant", garden_plant_path(myplant),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
+   <br>
 <% end %>
-
+<br>
 <%= link_to "Delete Garden",garden_path(@garden),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
 <%= link_to "Add a plant", new_garden_garden_plant_path(@garden), class: "btn btn-primary" %>
