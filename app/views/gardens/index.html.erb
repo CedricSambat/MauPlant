@@ -1,8 +1,10 @@
 <div class="d-flex flex-column mb-3">
   <% @gardens.each do |garden|%>
+  <br>
     <%= link_to garden_path(garden), class: "btn btn-outline-success" do %>
       <%= garden.name %>
     <% end %>
-   <%= link_to "create garden", new_garden_path %>
   <%end%>
+  <br>
+  <%= link_to "create garden", new_garden_path %>
 </div>
