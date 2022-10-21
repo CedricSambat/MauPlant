@@ -13,11 +13,11 @@ puts "starting seeding"
 puts "cleaning database"
 
 
-User.destroy_all
+GardenPlant.destroy_all
 Plant.destroy_all
 Categorie.destroy_all
 Garden.destroy_all
-GardenPlant.destroy_all
+User.destroy_all
 
 user = User.create(email: 'test@gmail.com', password: '123456')
 
@@ -106,7 +106,7 @@ plant16.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267962/240_F_169305319_ocVsDjvATOkwU1vnhXJcRGTzVehRVSr9_dq8zzw.jpg")
 plant17 = Plant.new(name: "Capcicum", description:"lorem ipsum", category:"vegetable")
-plan17.photo.attach(io: file, filename: "Capcicum.jpg", content_type: "image/jpg")
+plant17.photo.attach(io: file, filename: "Capcicum.jpg", content_type: "image/jpg")
 plant17.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267940/1000_F_240969248_tL666JKRYq8ecSiVTEehEesDW7Ss9YTt_xs4kes.jpg")
@@ -137,7 +137,7 @@ plant22.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268050/756e3e7e27f4278fc86d4d950c8a85fd_xluj6c.png")
 plant23 = Plant.new(name: "Hibiscus", description:"lorem ipsum", category:"flower")
-plant.photo.attach(io: file, filename: "Roses.png", content_type: "image/jpg")
+plant23.photo.attach(io: file, filename: "Roses.png", content_type: "image/jpg")
 plant23.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268080/3ce9f5af57c97bfdcd53cdb878c48ce9_nyd7u5.jpg")
