@@ -121,13 +121,13 @@ plant19.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267993/1000_F_277530247_iWPLqhh85Zsmfasd3w15NzmiZrX6U6W2_fvunde.jpg")
 plant20 = Plant.new(name: "Mint", description:"lorem ipsum", category:"vegetable")
-plant20.photo.attach(io: file, filename: ".jpg", content_type: "image/jpg")
+plant20.photo.attach(io: file, filename: "Mint.jpg", content_type: "image/jpg")
 
 plant20.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268003/fe61b5adb4f765f51ecc2fc15927d8c7_orhrnw.jpg")
 plant21 = Plant.new(name: "Marigold", description:"lorem ipsum", category:"flower")
-plant21.photo.attach(io: file, filename: ".jpg", content_type: "image/jpg")
+plant21.photo.attach(io: file, filename: "Marigold.jpg", content_type: "image/jpg")
 plant21.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268035/0a16e41dc98a48c11555375fcc9a1f0f_oethwk.png")
