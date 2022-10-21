@@ -12,7 +12,6 @@ puts "starting seeding"
 
 puts "cleaning database"
 
-
 User.destroy_all
 Plant.destroy_all
 Categorie.destroy_all
