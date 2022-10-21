@@ -12,11 +12,18 @@ puts "starting seeding"
 
 puts "cleaning database"
 
+
 user.destroy_all
 plant.destroy_all
 categories.destroy_all
 garden.destroy_all
 garden_plants.destroy_all
+
+# User.destroy_all
+plant
+plant1 = Plant.create(name: "mango", description: "klsdvklsn", category:"fruit")
+plant1.save!
+
 
 puts "creating garden"
 
