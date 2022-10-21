@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  # root to: "pages#home"
-
   root to: "pages#home"
+
   resources :categories, only: %i[index show]
   resources :plants , only: %i[show] do
   end
@@ -14,4 +13,5 @@ Rails.application.routes.draw do
     resources :garden_plants, only: [:new, :create]
   end
   resources :plants
+  resources :garden_plants, only:[:destroy]
 end

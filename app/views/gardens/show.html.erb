@@ -2,11 +2,16 @@
 <div class="wrapper">
   <div class="d-flex">
     <%= @garden.name %>
+    <br>
       <div class="card-plant">
-        <% @plants.each do |plant|%>
+        <% @myplants.each do |plant|%>
+        <% plant = myplant.plant %>
         <%= plant.name %>
+        <%= cl_image_tag plant.photo.key %>
+        <%= link_to "Remove Plant", garden_plant_path(myplant),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary"%>
+        <br>
         <% end %>
-       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       </div>
   </div>
     <%= link_to "Delete Garden",garden_path(@garden),
