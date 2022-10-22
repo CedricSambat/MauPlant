@@ -4,7 +4,7 @@
     <%= @garden.name %>
     <br>
       <div class="card-plant">
-        <% @myplants.each do |plant|%>
+        <% @myplants.each do |myplant|%>
         <% plant = myplant.plant %>
         <%= plant.name %>
         <%= cl_image_tag plant.photo.key %>
