@@ -1,8 +1,25 @@
-<div class="d-flex flex-column mb-3">
-  <% @gardens.each do |garden|%>
-    <%= link_to garden_path(garden), class: "btn btn-outline-success" do %>
-      <%= garden.name %>
-    <% end %>
-   <%= link_to "create garden", new_garden_path %>
-  <%end%>
-</div>
+
+<div class="wrapper">
+ <div class="card">
+   <div><h1>Hello Gardeners</h1></div>
+   <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+    <div class="search-form-control form-group">
+     <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+      <button name="button" type="submit" class="btn btn-flat">
+       <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+   <% end %>
+ </div>
+
+ <div><h2>Your gardens</h2></div>
+
+ <div class="card-garden d-flex flex-column mb-3">
+    <% @gardens.each do |garden|%>
+      <%= link_to garden_path(garden), class: "btn btn-outline-success" do %>
+        <%= garden.name %>
+        <img src="https://res.cloudinary.com/dfz9nuknq/image/upload/v1666349712/Mauplant/plants/istockphoto-1327986655-2048x2048_srd3sa.jpg" />
+      <% end %>
+    <%end%>
+    <%= link_to "create garden", new_garden_path %>
+ </div>
