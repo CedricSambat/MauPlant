@@ -8,7 +8,7 @@
 
 <!-- Button trigger modal -->
   <% if current_user %>
-    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-success reminder" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Reminder
     </button>
   <%end %>
@@ -18,12 +18,12 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Reminder</h5>
+          <h5 class="modal-title " id="exampleModalLabel">Reminder</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <% @gardens.each do |garden|%>
-           <li><%= link_to garden.name, garden_path(garden)%> <br> <strong><%= garden.reminder %></strong></li>
+           <li style="list-style-type:none;"><%= link_to garden.name, garden_path(garden),class: "modal-name"%> <br> <strong><%= garden.reminder %></strong></li>
           <% end %>
         </div>
         <div class="modal-footer">

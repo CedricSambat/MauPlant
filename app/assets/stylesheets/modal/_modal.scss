@@ -1,13 +1,27 @@
 .modal-button{
   appearance: none;
-  background: #3fc771;
+  // background: #639e79;
   border-radius: 0.25em;
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
   font-weight: 500;
   height: 3em;
   line-height: 3em;
   padding: 0 1em;
-  hover:abs($number: 0);
+
+}
+
+.reminder{
+  background: #3f5c44;
+  position: fixed;
+  top: 364px;
+  left: 141px;
+  height: 48px;
+  width: 172px;
+  font-size: 30px;
+}
+.modal-name{
+  color: #1c241f;
+  font-size: 50px;
 }
