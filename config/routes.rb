@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resources :garden_plants, only: [:new, :create]
   end
   resources :plants
+  resources :garden_plants, only:[:destroy]
 end
