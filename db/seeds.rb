@@ -10,7 +10,6 @@ require "open-uri"
 
 puts "cleaning database"
 
-
 GardenPlant.destroy_all
 Plant.destroy_all
 Categorie.destroy_all
