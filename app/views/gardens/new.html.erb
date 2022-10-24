@@ -1,8 +1,10 @@
 Create Garden
 <%= simple_form_for(@garden) do |f| %>
   <%= f.input :name %>
+  <%= f.input :reminder %>
   <%# <%= f.input :latitude %>
   <%# <%= f.input :longtude %>
   <%# <%= f.input :address %>
   <%= f.submit %>
 <% end %>
+

@@ -1,0 +1,18 @@
+<%# <h1>Reminder</h1>
+<div class="container">
+  <div id="clock"></div>
+  <input name="alarmTime" type="datetime-local">
+  <div class="controls">
+    <button class="button set-alarm">set reminder</button>
+    <button class="button clear-alarm">clear reminder</button>
+  <%# </div> %>
+
+<section class="container">
+  <div id="clock"></div>
+  <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local">
+  <div class="controls">
+    <button onclick="setAlarm()" class="button set-alarm">Set alarm</button>
+    <button onclick="clearAlarm()" class="button clear-alarm">Clear alarm</button>
+  </div>
+  <script src="clock.js"></script>
+</section>
