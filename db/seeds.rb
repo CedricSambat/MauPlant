@@ -31,7 +31,7 @@ plant2.photo.attach(io: file, filename: "litchee.jpg", content_type: "image/jpg"
 plant2.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267721/75515e14b04666e60d3df1b32dfc7d31_c97fja.jpg")
-plant3 = Plant.new(name: "star fruit", description:"lorem ipsum", category:"fruit")
+plant3 = Plant.new(name: "star fruit", description:"Plant your star fruit in full sun, away from other trees and buildings, structures, and power lines. Along with warm temperatures, this plant needs well-drained soil, improved fertilization, and protection from the wind. It may also need supplemental irrigation as carambola is not drought-tolerant, water the tree very deeply once or twice per week if it hasn't rained. Watering is most vital from flowering through fruiting.", category:"fruit")
 plant3.photo.attach(io: file, filename: "star_fruit.jpg", content_type: "image/jpg")
 plant3.save
 
