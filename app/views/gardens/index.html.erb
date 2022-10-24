@@ -14,12 +14,14 @@
 
  <div><h2>Your gardens</h2></div>
 
- <div class="card-garden d-flex flex-column mb-3">
+  <div class="card-trip">
     <% @gardens.each do |garden|%>
-      <%= link_to garden_path(garden), class: "btn btn-outline-success" do %>
-        <%= garden.name %>
-        <img src="https://res.cloudinary.com/dfz9nuknq/image/upload/v1666349712/Mauplant/plants/istockphoto-1327986655-2048x2048_srd3sa.jpg" />
-      <% end %>
-    <%end%>
-    <%= link_to "create garden", new_garden_path %>
- </div>
+        <%= link_to garden_path(garden), class: "btn btn-outline-success" do %>
+          <%= garden.name %>
+    <img src="https://res.cloudinary.com/dfz9nuknq/image/upload/v1666349712/Mauplant/plants/istockphoto-1327986655-2048x2048_srd3sa.jpg" />
+        <% end %>
+      <%end%>
+
+  </div>
+</div>
+<div class="btn_garden"><%= link_to "create garden", new_garden_path %></div>
