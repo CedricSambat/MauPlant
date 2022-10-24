@@ -7,10 +7,11 @@
       </div>
 
 <!-- Button trigger modal -->
-
+  <% if current_user %>
     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Reminder
     </button>
+  <%end %>
 
 <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -21,7 +22,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <%= link_to "My Garden", "/gardens" %>
+          <% @gardens.each do |garden|%>
+            <%= link_to garden.reminder, garden_path(garden)%>
+          <% end %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
