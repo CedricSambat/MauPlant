@@ -1,0 +1,13 @@
+.modal-button{
+  appearance: none;
+  background: #3fc771;
+  border-radius: 0.25em;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 1em;
+  hover:abs($number: 0);
+}

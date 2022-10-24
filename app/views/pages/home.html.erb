@@ -23,11 +23,11 @@
         </div>
         <div class="modal-body">
           <% @gardens.each do |garden|%>
-            <%= link_to garden.reminder, garden_path(garden)%>
+           <li><%= link_to garden.name, garden_path(garden)%> <br> <strong><%= garden.reminder %></strong></li>
           <% end %>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary modal-button" data-bs-dismiss="modal">Close</button>
           <%# <button type="button" class="btn btn-primary">Save changes</button> %>
         </div>
       </div>
