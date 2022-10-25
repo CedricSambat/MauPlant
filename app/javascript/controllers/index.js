@@ -13,3 +13,5 @@ application.register("hello", HelloController)
 import SwipeController from "./swipe_controller"
 application.register("swipe", SwipeController)
 
+import ReminderController from "./reminder_controller"
+application.register("reminder", ReminderController)

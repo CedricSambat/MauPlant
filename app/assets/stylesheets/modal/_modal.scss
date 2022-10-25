@@ -1,0 +1,52 @@
+.modal-button{
+  appearance: none;
+  // background: #639e79;
+  border-radius: 0.25em;
+  color: rgb(51, 58, 56);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  height: 3em;
+  line-height: 3em;
+  padding: 0 1em;
+}
+
+.reminder{
+  background: #3e6645;
+  position: absolute;
+  top: 308px;
+  left: 109px;
+  height: 48px;
+  width: 212px;
+  font-size: 25px;
+  list-style-type: none;
+  color:rgb(152,203,50);
+  border-radius:45px;
+}
+.modal-name{
+  color:#4f553e;
+  font-size: 45px;
+}
+.list{
+  list-style-type: none;
+}
+
+.reminder-h{
+color: #d84444;
+font-size: 20px;
+}
+.modal-header{
+  flex-direction: column;
+  background-color:#326345 ;
+}
+
+.modal-title{
+  font-size: 50px;
+}
+.modal-body{
+  background-color:rgb(200,209,218) ;
+  background-image: url(https://images.pexels.com/photos/2421953/pexels-ph…jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+.modal-footer{
+  background-color: #8bc5a1;
+}

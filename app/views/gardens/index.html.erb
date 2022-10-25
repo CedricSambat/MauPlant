@@ -1,26 +1,33 @@
 
-<div class="wrapper">
+<div class="conatainer_">
  <div class="card">
-   <div><h1>Hello Gardeners</h1></div>
-   <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-    <div class="search-form-control form-group">
-     <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-      <button name="button" type="submit" class="btn btn-flat">
-       <i class="fas fa-search"></i> Search
-      </button>
-    </div>
-   <% end %>
+    <div class="background_1" style="background-image: linear-gradient(rgba(0,70,0,0.6), rgba(0,8,51,0.9)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666656811/Mauplant/plants/photo-1514053026555-49ce8886ae41_f6sbni.avif)">
+      <div class="title"><h1>Hello Gardeners</h1></div>
+      <%= form_with url: gardens_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a garden"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+     </div>
  </div>
-
- <div><h2>Your gardens</h2></div>
-  <div class="card-trip">
-    <% @gardens.each do |garden|%>
-        <%= link_to garden_path(garden), class: "btn btn-outline-success" do %>
-          <%= garden.name %>
-    <img src="https://res.cloudinary.com/dfz9nuknq/image/upload/v1666349712/Mauplant/plants/istockphoto-1327986655-2048x2048_srd3sa.jpg" />
-        <% end %>
-      <%end%>
-
-  </div>
+  <div class="card-gardens">
+    <div class="background_l" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666656529/Mauplant/plants/photo-1459156212016-c812468e2115_b6d1xe.avif)">
+      <div class="card-trip d-flex">
+          <% @gardens.each do |garden|%>
+              <%= link_to garden_path(garden), class: "btn btn-outline-success" do %>
+                <div class="garden_name"><%= garden.name %></div>
+                <img src="https://res.cloudinary.com/dfz9nuknq/image/upload/v1666349712/Mauplant/plants/istockphoto-1327986655-2048x2048_srd3sa.jpg" />
+              <% end %>
+          <%end%>
+          <div class="card-trip-infos">
+            <h2>Your gardens</h2>
+            <p>12 plants!</p>
+          </div>
+      </div>
+      <div class="btn_garden"><%= link_to "create garden", new_garden_path %></div>
+    </div>
+    </div>
 </div>
-<div class="btn_garden"><%= link_to "create garden", new_garden_path %></div>
