@@ -9,7 +9,7 @@
 require "open-uri"
 
 puts "cleaning database"
-
+Message.destroy_all
 GardenPlant.destroy_all
 Plant.destroy_all
 Categorie.destroy_all
