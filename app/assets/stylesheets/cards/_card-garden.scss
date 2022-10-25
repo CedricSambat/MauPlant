@@ -15,11 +15,17 @@
 
   .card-product .card-garden-infos {
     padding: 16px;
-  }
-  
+    
 .form-control{
   border-radius: 50px;
 
+}
+.search-form-control {
+    position: relative;
+    align-items: center;
+    width: 357px;
+    padding-right: -18px;
+    margin-left: 23px;
 }
 .card-trip {
   overflow: hidden;
@@ -27,10 +33,72 @@
   box-shadow: 0 0 25px rgba(0,0,0,0.2);
   border-radius: 25px;
   margin: 10px;
+  display: flex;
+  flex-direction: column-reverse;
 }
+
 .card-trip img {
-  height: 143px;
-    width: 211px;
+  height: 194px;
+    width: 377px;
     display: flex;
     border-radius: 18px;
-    }
+
+    margin-left: -4px;
+}
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+//btn create
+.btn_garden{
+  background-color: #fdfffe;
+  border: 1px solid #4A4A4A;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  width: 120px;
+  margin-left: 140px;
+
+}
+.title{
+  margin-top: 23px;
+    margin-left: 22px;
+    margin-bottom: 18px;
+}
+.conatainer_gardens{
+  background-color: aquamarine;
+}
+.card{
+  background-color: #074f57;
+  color: white;
+  height: 231px;
+}
+.card-gardens{
+  background-color: white;
+  padding-top: 39px;
+  margin-top: -50px;
+}
+.background_1{
+  height: 231px;
+}
+background_l{
+ padding-top: 10px;
+}
