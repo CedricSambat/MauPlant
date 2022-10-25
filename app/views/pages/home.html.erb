@@ -8,7 +8,7 @@
 
 <!-- Button trigger modal -->
   <% if current_user %>
-    <button type="button" class="btn reminder" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn reminder"  data-bs-toggle="modal" data-bs-target="#exampleModal">
       Reminder
     </button>
   <%end %>
@@ -27,10 +27,12 @@
 
            <% if Time.now - garden.reminder > 0%>
               <strong><div class="red"><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
+              <div ><img src="https://articulate-heroes.s3.amazonaws.com/uploads/rte/pqvxlfws_watering-can.gif"class="plant-imag"></div>
              <div class="reminder-h"><h3>It's time to water your plant!!!!!</h3></div>
             <% else %>
-             <strong><div><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
-             <div class="reminder-g "><h3>You are good to go</h3></div>
+             <strong><div class="date-rem"><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
+              <div><img src="https://i.pinimg.com/originals/2e/fb/90/2efb90c0b69884f2a69e67bdf4d6bff7.gif"class="plant-imag"></div>
+             <div class="reminder-g"> <h3>You are good to go</h3></div>
            <% end %>
           <% end %>
         </div>

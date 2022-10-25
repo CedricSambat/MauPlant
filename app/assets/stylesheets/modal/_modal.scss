@@ -2,7 +2,7 @@
   appearance: none;
   // background: #639e79;
   border-radius: 0.25em;
-  color: rgb(51, 58, 56);
+  color: rgb(3, 3, 3);
   cursor: pointer;
   display: inline-block;
   font-weight: 500;
@@ -22,35 +22,54 @@
   list-style-type: none;
   color: #98cb32;
   border-radius: 45px;
+
 }
 .modal-name{
   color:#4f553e;
   font-size: 32px;
   text-decoration: none;
+  margin-left: 87px;
 }
 .list{
   list-style-type: none;
 }
 
 .reminder-h{
-color: #d84444;
+color: #d10808;
 font-size: 20px;
+}
+.reminder-g{
+  color:#3e6645
+}
+.date-rem{
+  color:#326345
 }
 .modal-header{
   flex-direction: column;
-  background-color:#326345 ;
+  background-color:#d3e6da ;
+  background-image: url("https://images.pexels.com/photos/8205506/pexels-photo-8205506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  .background-image{
+    display:fixed;
+    width: 10px;
+  }
 }
 
 .modal-title{
-  font-size: 50px;
+  font-size: 45px;
+  color:#215334 ;
 }
 .modal-body{
-  background-color:rgb(200,209,218) ;
-  background-image: url(https://images.pexels.com/photos/2421953/pexels-ph…jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-color:rgb(200,209,218);
 }
 .modal-footer{
-  background-color: #8bc5a1;
+  background-color: #2f7d4d;
 }
 .red {
-  color: #d84444;
+  color:#d10808;
+}
+.plant-imag{
+  height: 30px;
+  width: 30px;
+  right: 58px;
+  border-radius: 32px;
 }
