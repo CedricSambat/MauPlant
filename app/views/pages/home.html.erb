@@ -23,10 +23,13 @@
         </div>
         <div class="modal-body list">
           <% @gardens.each do |garden|%>
-            <li><%= link_to garden.name, garden_path(garden),class: "modal-name" %> <br> <strong><div><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div><li>
+            <li><%= link_to garden.name, garden_path(garden),class: "modal-name" %> <br> <li>
+
            <% if Time.now - garden.reminder > 0%>
+              <strong><div class="red"><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
              <div class="reminder-h"><h3>It's time to water your plant!!!!!</h3></div>
             <% else %>
+             <strong><div><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
              <div class="reminder-g "><h3>You are good to go</h3></div>
            <% end %>
           <% end %>
