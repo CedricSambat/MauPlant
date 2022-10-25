@@ -1,9 +1,45 @@
 Welcome to plants index
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <% @fruits.each do |fruit| %>
+      <div class="swiper-slide">
+        <%= fruit.name %>
+        <%= cl_image_tag fruit.photo.key %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<ul>
-  <% @plants.each do |plant| %>
-    <li><%= plant.name %></li>
-    <%= cl_image_tag plant.photo.key %>
-    <%= link_to "Show More", plant_path(plant), class: "btn btn-outline-success"%>
-  <% end %>
-</ul>
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <% @flowers.each do |flo| %>
+      <div class="swiper-slide">
+        <%= flo.name %>
+        <%= cl_image_tag flo.photo.key %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <% @vegetables.each do |veg| %>
+      <div class="swiper-slide">
+        <%= veg.name %>
+        <%= cl_image_tag veg.photo.key %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+  <!-- If we need navigation buttons -->
+  <%# <div class="swiper-button-prev"></div>
+
+  <div class="swiper-button-next"></div> %>
