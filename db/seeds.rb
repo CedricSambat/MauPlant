@@ -21,7 +21,8 @@ User.create(email: 'test@gmail.com', password: '123456')
 puts "creating garden"
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267669/1fb1d6e69cafebd7b6884e3b7a13838c_vl1hrz.jpg")
-plant1 = Plant.new(name: "Mandarin", description:"", category:"fruit")
+plant1 = Plant.new(name: "Mandarin",
+ description:"Water the tree in well and then cover the soil with a 10cm layer of mulch to conserve moisture, but keep it away from the trunk. In the first year, water trees at least once or twice a week, depending on the weather conditions. Once established, water trees deeply every two to three weeks, more in hot dry weather.", category:"fruit")
 plant1.photo.attach(io: file, filename: "Mandarin.jpg", content_type: "image/jpg")
 plant1.save
 
@@ -31,8 +32,7 @@ plant2.photo.attach(io: file, filename: "litchee.jpg", content_type: "image/jpg"
 plant2.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267721/75515e14b04666e60d3df1b32dfc7d31_c97fja.jpg")
-plant3 = Plant.new(name: "Star fruit",
- description:"Plant your star fruit in full sun, away from other trees and buildings, structures, and power lines. Along with warm temperatures, this plant needs well-drained soil, improved fertilization, and protection from the wind. It may also need supplemental irrigation as carambola is not drought-tolerant, water the tree very deeply once or twice per week if it hasn't rained. Watering is most vital from flowering through fruiting.",
+plant3 = Plant.new(name: "Star fruit", description:"Plant your star fruit in full sun, away from other trees and buildings, structures, and power lines. Along with warm temperatures, this plant needs well-drained soil, improved fertilization, and protection from the wind. It may also need supplemental irrigation as carambola is not drought-tolerant, water the tree very deeply once or twice per week if it hasn't rained. Watering is most vital from flowering through fruiting.",
   category:"fruit")
 plant3.photo.attach(io: file, filename: "star_fruit.jpg", content_type: "image/jpg")
 plant3.save
@@ -43,32 +43,32 @@ plant4.photo.attach(io: file, filename: "longan.jpg", content_type: "image/jpg")
 plant4.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267743/f0f042cf501ccdff441cde78112466e5_ncmubt.jpg")
-plant5 = Plant.new(name: "Aplpe", description:"lorem ipsum", category:"fruit")
-plant5.photo.attach(io: file, filename: "aplpe.jpg", content_type: "image/jpg")
+plant5 = Plant.new(name: "Apple", description:" water the roots, then allow that water to absorb before watering more. Give your tree a deep watering and then let those roots dry out completely before watering again later in the week or month. If your apple tree's roots never dry out, it will become vulnerable to root rot.", category:"fruit")
+plant5.photo.attach(io: file, filename: "apple.jpg", content_type: "image/jpg")
 plant5.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267762/f87136c3cfbd8a763c3c94cd396883d9_zor0df.jpg")
-plant6 = Plant.new(name: "Pommegrenade", description:"lorem ipsum", category:"fruit")
+plant6 = Plant.new(name: "Pommegrenade", description:"pomegranates require about 45 inches of water per year either from rainfall or irrigation.", category:"fruit")
 plant6.photo.attach(io: file, filename: "pommegrenade.jpg", content_type: "image/jpg")
 plant6.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267776/6f5e29876c0a2b9a8b2d5dc3bbdec15f_teu0ng.jpg")
-plant7 = Plant.new(name: "Strawberry", description:"lorem ipsum", category:"fruit")
+plant7 = Plant.new(name: "Strawberry", description:"The best way to water strawberries is to use drip or soaker hose placed at least two inches away from the plant. Strawberry roots are shallow, so keep the soil moist but not soggy. If soil is high in clay, be especially careful not to over-water. Use sprinkler irrigation carefully.", category:"fruit")
 plant7.photo.attach(io: file, filename: "strawberry.jpg", content_type: "image/jpg")
 plant7.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267787/f51f048cc7462a6ff8b68dce01b30c66_dceb0w.jpg")
-plant8 = Plant.new(name: "Water Melon", description:"lorem ipsum", category:"fruit")
+plant8 = Plant.new(name: "Water Melon", description:"Watering 1–2 times per week,try to keep the soil moist to a depth of 12 inches (30 cm) at all times.", category:"fruit")
 plant8.photo.attach(io: file, filename: "water_melon.jpg", content_type: "image/jpg")
 plant8.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267802/5e32f088243fc309b10e632e5f482cd3_wbfnn7.jpg")
-plant9 = Plant.new(name: "Pinapple", description:"lorem ipsum", category:"fruit")
-plant9.photo.attach(io: file, filename: "Pinapple.jpg", content_type: "image/jpg")
+plant9 = Plant.new(name: "Pineapple", description:"Since tropicals can handle lots of water and moisture, remember to water this plant regularly to help its flower and fruit eventually develop. Water the soil directly and keep the soil moist but not soggy. Water once a week when the soil surface is dry.", category:"fruit")
+plant9.photo.attach(io: file, filename: "Pineapple.jpg", content_type: "image/jpg")
 plant9.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267824/1000_F_91680839_JwEVYgOYVAqZTjASnkZTnsAgt3yM45ED_jdvpwu.jpg")
-plant10 = Plant.new(name: "Pear", description:"lorem ipsum", category:"fruit")
+plant10 = Plant.new(name: "Pear", description:"", category:"fruit")
 plant10.photo.attach(io: file, filename: "pear.jpg", content_type: "image/jpg")
 plant10.save
 
