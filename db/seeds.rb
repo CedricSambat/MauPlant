@@ -9,6 +9,7 @@
 require "open-uri"
 
 puts "cleaning database"
+Chatroom.destroy_all
 Message.destroy_all
 GardenPlant.destroy_all
 Plant.destroy_all
@@ -150,3 +151,6 @@ file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268122/r
 plant26 = Plant.new(name: "Red Roses", description:"lorem ipsum", category:"flower")
 plant26.photo.attach(io: file, filename: "Red_Roses.jpg", content_type: "image/jpg")
 plant26.save
+
+chatroom1 = Chatroom.new(name: "test")
+chatroom1.save

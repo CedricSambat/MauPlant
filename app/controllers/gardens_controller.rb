@@ -1,14 +1,14 @@
 class GardensController < ApplicationController
   def index
-    @gardens = Garden.all
-
-    if current_user.gardens
+    if params[:query].present?
+      @gardens = Garden.where("name ILIKE ?", "%#{params[:query]}%")
+    elsif current_user.gardens
       @gardens = Garden.all.where(user_id: current_user)
     else
       redirect_to "/gardens/new"
     end
   end
-  
+
   def show
     @garden = Garden.find(params[:id])
     @myplants = @garden.garden_plants
