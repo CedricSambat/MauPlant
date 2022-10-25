@@ -13,15 +13,15 @@
 
 .reminder{
   background: #3e6645;
-  position: absolute;
-  top: 308px;
-  left: 109px;
-  height: 48px;
-  width: 212px;
+  position: fixed;
+  top: 221px;
+  left: 62px;
+  height: 67px;
+  width: 214px;
   font-size: 25px;
   list-style-type: none;
-  color:rgb(152,203,50);
-  border-radius:45px;
+  color: #98cb32;
+  border-radius: 45px;
 }
 .modal-name{
   color:#4f553e;
