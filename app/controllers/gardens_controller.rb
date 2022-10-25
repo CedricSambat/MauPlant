@@ -8,7 +8,7 @@ class GardensController < ApplicationController
       redirect_to "/gardens/new"
     end
   end
-
+  
   def show
     @garden = Garden.find(params[:id])
     @myplants = @garden.garden_plants
