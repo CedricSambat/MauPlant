@@ -9,7 +9,8 @@
 require "open-uri"
 
 puts "cleaning database"
-
+Chatroom.destroy_all
+Message.destroy_all
 GardenPlant.destroy_all
 Plant.destroy_all
 Categorie.destroy_all
@@ -21,77 +22,79 @@ User.create(email: 'test@gmail.com', password: '123456')
 puts "creating garden"
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267669/1fb1d6e69cafebd7b6884e3b7a13838c_vl1hrz.jpg")
-plant1 = Plant.new(name: "Mandarin", description:"lorem ipsum", category:"fruit")
+plant1 = Plant.new(name: "Mandarin",
+ description:"Water the tree in well and then cover the soil with a 10cm layer of mulch to conserve moisture, but keep it away from the trunk. In the first year, water trees at least once or twice a week, depending on the weather conditions. Once established, water trees deeply every two to three weeks, more in hot dry weather.", category:"fruit")
 plant1.photo.attach(io: file, filename: "Mandarin.jpg", content_type: "image/jpg")
 plant1.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267686/fc978a8aeab608b13a2ef8214a48daca_llzbqp.jpg")
-plant2 = Plant.new(name: "litchee", description:"lorem ipsum", category:"fruit")
+plant2 = Plant.new(name: "Litchee", description:"lorem ipsum", category:"fruit")
 plant2.photo.attach(io: file, filename: "litchee.jpg", content_type: "image/jpg")
 plant2.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267721/75515e14b04666e60d3df1b32dfc7d31_c97fja.jpg")
-plant3 = Plant.new(name: "star fruit", description:"lorem ipsum", category:"fruit")
+plant3 = Plant.new(name: "Star fruit", description:"Plant your star fruit in full sun, away from other trees and buildings, structures, and power lines. Along with warm temperatures, this plant needs well-drained soil, improved fertilization, and protection from the wind. It may also need supplemental irrigation as carambola is not drought-tolerant, water the tree very deeply once or twice per week if it hasn't rained. Watering is most vital from flowering through fruiting.",
+  category:"fruit")
 plant3.photo.attach(io: file, filename: "star_fruit.jpg", content_type: "image/jpg")
 plant3.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267704/225305102_4505699912788113_1505443211150085412_n-300x300_xiqxoe.jpg")
-plant4 = Plant.new(name: "longan", description:"lorem ipsum", category:"fruit")
+plant4 = Plant.new(name: "Longan", description:"Irrigate a longan tree in the same manner once a week, but only if it did not rain 1 inch of water during that week. Stop watering a longan tree in late summer after harvesting the fruit. It then only needs water during long droughts.", category:"fruit")
 plant4.photo.attach(io: file, filename: "longan.jpg", content_type: "image/jpg")
 plant4.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267743/f0f042cf501ccdff441cde78112466e5_ncmubt.jpg")
-plant5 = Plant.new(name: "aplpe", description:"lorem ipsum", category:"fruit")
-plant5.photo.attach(io: file, filename: "aplpe.jpg", content_type: "image/jpg")
+plant5 = Plant.new(name: "Apple", description:" water the roots, then allow that water to absorb before watering more. Give your tree a deep watering and then let those roots dry out completely before watering again later in the week or month. If your apple tree's roots never dry out, it will become vulnerable to root rot.", category:"fruit")
+plant5.photo.attach(io: file, filename: "apple.jpg", content_type: "image/jpg")
 plant5.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267762/f87136c3cfbd8a763c3c94cd396883d9_zor0df.jpg")
-plant6 = Plant.new(name: "pommegrenade", description:"lorem ipsum", category:"fruit")
+plant6 = Plant.new(name: "Pommegrenade", description:"pomegranates require about 45 inches of water per year either from rainfall or irrigation.", category:"fruit")
 plant6.photo.attach(io: file, filename: "pommegrenade.jpg", content_type: "image/jpg")
 plant6.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267776/6f5e29876c0a2b9a8b2d5dc3bbdec15f_teu0ng.jpg")
-plant7 = Plant.new(name: "strawberry", description:"lorem ipsum", category:"fruit")
+plant7 = Plant.new(name: "Strawberry", description:"The best way to water strawberries is to use drip or soaker hose placed at least two inches away from the plant. Strawberry roots are shallow, so keep the soil moist but not soggy. If soil is high in clay, be especially careful not to over-water. Use sprinkler irrigation carefully.", category:"fruit")
 plant7.photo.attach(io: file, filename: "strawberry.jpg", content_type: "image/jpg")
 plant7.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267787/f51f048cc7462a6ff8b68dce01b30c66_dceb0w.jpg")
-plant8 = Plant.new(name: "water melon", description:"lorem ipsum", category:"fruit")
+plant8 = Plant.new(name: "Water Melon", description:"Watering 1–2 times per week,try to keep the soil moist to a depth of 12 inches (30 cm) at all times.", category:"fruit")
 plant8.photo.attach(io: file, filename: "water_melon.jpg", content_type: "image/jpg")
 plant8.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267802/5e32f088243fc309b10e632e5f482cd3_wbfnn7.jpg")
-plant9 = Plant.new(name: "Pinapple", description:"lorem ipsum", category:"fruit")
-plant9.photo.attach(io: file, filename: "Pinapple.jpg", content_type: "image/jpg")
+plant9 = Plant.new(name: "Pineapple", description:"Since tropicals can handle lots of water and moisture, remember to water this plant regularly to help its flower and fruit eventually develop. Water the soil directly and keep the soil moist but not soggy. Water once a week when the soil surface is dry.", category:"fruit")
+plant9.photo.attach(io: file, filename: "Pineapple.jpg", content_type: "image/jpg")
 plant9.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267824/1000_F_91680839_JwEVYgOYVAqZTjASnkZTnsAgt3yM45ED_jdvpwu.jpg")
-plant10 = Plant.new(name: "pear", description:"lorem ipsum", category:"fruit")
+plant10 = Plant.new(name: "Pear", description:"", category:"fruit")
 plant10.photo.attach(io: file, filename: "pear.jpg", content_type: "image/jpg")
 plant10.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267813/1e3dbd284a9eb7c3e939622bd0c4f422_obie6d.jpg")
-plant11 = Plant.new(name: "grape", description:"lorem ipsum", category:"fruit")
+plant11 = Plant.new(name: "Grape", description:"lorem ipsum", category:"fruit")
 plant11.photo.attach(io: file, filename: "grape.jpg", content_type: "image/jpg")
 plant11.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267839/8a88aacd48b3eabbf7cba3f6110128b1_xns6af.jpg")
-plant12 = Plant.new(name: "potato", description:"lorem ipsum", category:"vegetable")
+plant12 = Plant.new(name: "Potato", description:"lorem ipsum", category:"vegetable")
 plant12.photo.attach(io: file, filename: "potato.jpg", content_type: "image/jpg")
 plant12.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267850/b48bd1329d34f40610561657b433a65b_xtqz0y.jpg")
-plant13 = Plant.new(name: "cocumber", description:"lorem ipsum", category:"vegetable")
+plant13 = Plant.new(name: "Cocumber", description:"lorem ipsum", category:"vegetable")
 plant13.photo.attach(io: file, filename: "cocumber.jpg", content_type: "image/jpg")
 plant13.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267863/eb3b4e976d45ca902904ac28650717af_w73dsr.jpg")
-plant14 = Plant.new(name: "cabbage", description:"lorem ipsum", category:"vegetable")
+plant14 = Plant.new(name: "Cabbage", description:"lorem ipsum", category:"vegetable")
 plant14.photo.attach(io: file, filename: "cabbage.jpg", content_type: "image/jpg")
 plant14.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267875/d50180be5f8b83eb52f1aa7e1719fc7b_tkei6a.jpg")
-plant15 = Plant.new(name: "lettuce", description:"lorem ipsum", category:"vegetable")
+plant15 = Plant.new(name: "Lettuce", description:"lorem ipsum", category:"vegetable")
 plant15.photo.attach(io: file, filename: "lettuce.jpg", content_type: "image/jpg")
 plant15.save
 
@@ -111,7 +114,7 @@ plant18.photo.attach(io: file, filename: "Eggplant.jpg", content_type: "image/jp
 plant18.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267975/240_F_65127874_BdEFCjM2tSqB1FdA8NnE5IF6ozio95VA_pldl0j.jpg")
-plant19 = Plant.new(name: "spinach", description:"lorem ipsum", category:"vegetable")
+plant19 = Plant.new(name: "Spinach", description:"lorem ipsum", category:"vegetable")
 plant19.photo.attach(io: file, filename: "spinach.jpg", content_type: "image/jpg")
 plant19.save
 
@@ -150,3 +153,6 @@ file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268122/r
 plant26 = Plant.new(name: "Red Roses", description:"lorem ipsum", category:"flower")
 plant26.photo.attach(io: file, filename: "Red_Roses.jpg", content_type: "image/jpg")
 plant26.save
+
+chatroom1 = Chatroom.new(name: "test")
+chatroom1.save

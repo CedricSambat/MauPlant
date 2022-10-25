@@ -3,6 +3,11 @@
   <div class="">
     <%= @garden.name %>
     <%= @garden.reminder.strftime('%a %d %b %Y')%>
+<div class="container_garden_show">
+  <div class="card_garden">
+    <div class="garden_name"><%= @garden.name %></div>
+    
+
     <br>
       <div class="card-plant">
         <% @myplants.each do |myplant|%>
@@ -15,7 +20,7 @@
         <% end %>
       </div>
   </div>
- <%= link_to "Delete Garden",garden_path(@garden),
+  <%= link_to "Delete Garden",garden_path(@garden),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
  <%= link_to "Add a plant", new_garden_garden_plant_path(@garden), class: "btn btn-primary" %>
   <%# btn reminder %>
