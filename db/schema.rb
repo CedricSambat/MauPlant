@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_21_071829) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_24_063426) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,8 +50,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_21_071829) do
     t.index ["plant_id"], name: "index_categories_on_plant_id"
   end
 
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "garden_plants", force: :cascade do |t|
-    t.datetime "reminder"
     t.bigint "plant_id", null: false
     t.bigint "garden_id", null: false
     t.datetime "created_at", null: false
@@ -68,7 +73,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_21_071829) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.datetime "reminder"
     t.index ["user_id"], name: "index_gardens_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "plants", force: :cascade do |t|
@@ -87,6 +103,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_21_071829) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "nickname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -97,4 +114,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_21_071829) do
   add_foreign_key "garden_plants", "gardens"
   add_foreign_key "garden_plants", "plants"
   add_foreign_key "gardens", "users"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
 end

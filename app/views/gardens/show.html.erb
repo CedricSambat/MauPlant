@@ -1,20 +1,23 @@
 
 <div class="wrapper">
-  <div class="d-flex">
+  <div class="">
     <%= @garden.name %>
+    <%= @garden.reminder %>
     <br>
       <div class="card-plant">
         <% @myplants.each do |myplant|%>
-        <% plant = myplant.plant %>
-        <%= plant.name %>
-        <%= cl_image_tag plant.photo.key %>
-        <%= link_to "Remove Plant", garden_plant_path(myplant),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary"%>
-        <br>
+          <% plant = myplant.plant %>
+          <%= plant.name %>
+          <%= cl_image_tag plant.photo.key %>
+          <%= link_to "Remove Plant", garden_plant_path(myplant),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary"%>
+          <br>
         <% end %>
       </div>
   </div>
     <%= link_to "Delete Garden",garden_path(@garden),
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
     <%= link_to "Add a plant", new_garden_garden_plant_path(@garden), class: "btn btn-primary" %>
+  <%# btn reminder %>
+    <%= link_to "edit reminder",edit_garden_path(@garden), class: "btn btn-primary"%>
 </div>
