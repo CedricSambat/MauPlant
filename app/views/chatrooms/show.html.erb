@@ -3,7 +3,7 @@
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>"
 >
-  <h1>#<%= @chatroom.name %></h1>
+  <h1><%= @chatroom.name %></h1>
 
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
@@ -23,6 +23,7 @@
       placeholder: "Message ##{@chatroom.name}",
       wrapper_html: {class: "flex-grow-1"}
     %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true, class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷' %>
     <%= f.submit "Send", class: "btn btn-success mb-3" %>
   <% end %>
 </div>
