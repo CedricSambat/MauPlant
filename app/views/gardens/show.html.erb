@@ -2,7 +2,7 @@
 <div class="wrapper">
   <div class="">
     <%= @garden.name %>
-    <%= @garden.reminder%>
+    <%= @garden.reminder.strftime('%a %d %b %Y')%>
     <br>
       <div class="card-plant">
         <% @myplants.each do |myplant|%>
