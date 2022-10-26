@@ -152,5 +152,5 @@ plant26 = Plant.new(name: "Red Roses", description:"lorem ipsum", category:"flow
 plant26.photo.attach(io: file, filename: "Red_Roses.jpg", content_type: "image/jpg")
 plant26.save
 
-chatroom1 = Chatroom.new(name: "test")
+chatroom1 = Chatroom.new(name: "Forum")
 chatroom1.save

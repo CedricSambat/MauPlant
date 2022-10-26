@@ -1,11 +1,13 @@
 .chatroom {
-  background: white;
+  background: rgb(151, 132, 132);
   margin-top: 9px;
   height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  background-image: url(https://media.tenor.com/0DcsrOCBx94AAAAC/plants-swamp.gif);
+  background-size:cover;
 
   h1 {
     border-bottom: 1px solid $gray-200;
