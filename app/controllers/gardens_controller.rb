@@ -58,7 +58,7 @@ class GardensController < ApplicationController
   private
 
   def garden_params
-    params.require(:garden).permit(:reminder, :user, :latitude, :longtude, :address, :name)
+    params.require(:garden).permit(:reminder, :user, :latitude, :longtude, :address, :name, :photo)
   end
 
   def set_list
