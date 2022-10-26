@@ -2,7 +2,7 @@
   appearance: none;
   // background: #639e79;
   border-radius: 0.25em;
-  color: rgb(51, 58, 56);
+  color: rgb(3, 3, 3);
   cursor: pointer;
   display: inline-block;
   font-weight: 500;
@@ -13,40 +13,68 @@
 
 .reminder{
   background: #3e6645;
-  position: absolute;
-  top: 308px;
-  left: 109px;
-  height: 48px;
-  width: 212px;
+  position: fixed;
+  top: 221px;
+  left: 62px;
+  height: 67px;
+  width: 214px;
   font-size: 25px;
   list-style-type: none;
-  color:rgb(152,203,50);
-  border-radius:45px;
+  color: #98cb32;
+  border-radius: 45px;
+
 }
 .modal-name{
   color:#4f553e;
-  font-size: 45px;
+  font-size: 32px;
+  text-decoration: none;
+  margin-left: 87px;
 }
 .list{
   list-style-type: none;
 }
 
 .reminder-h{
-color: #d84444;
-font-size: 20px;
+color: #d10808;
+
+}
+.reminder-g{
+  color:#3e6645;
+  font-size: 20px;
+}
+.date-rem{
+  color:#326345;
+  font-size: 20px;
 }
 .modal-header{
   flex-direction: column;
-  background-color:#326345 ;
+  background-color:#d3e6da ;
+  background-image: url("https://images.pexels.com/photos/8205506/pexels-photo-8205506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  .background-image{
+    display:fixed;
+    width: 10px;
+  }
 }
 
 .modal-title{
-  font-size: 50px;
+  font-size: 45px;
+  color:#215334 ;
 }
 .modal-body{
-  background-color:rgb(200,209,218) ;
-  background-image: url(https://images.pexels.com/photos/2421953/pexels-ph…jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-color:rgb(200,209,218);
 }
 .modal-footer{
-  background-color: #8bc5a1;
+  background-color: #2f7d4d;
+}
+.red {
+  color:#d10808;
+  font-size:20px;
+}
+.plant-imag{
+  height: 45px;
+  width: 45px;
+  right: 58px;
+  border-radius: 45px;
+  margin-left:20px;
+
 }
