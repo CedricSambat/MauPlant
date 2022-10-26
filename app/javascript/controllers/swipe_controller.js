@@ -1,8 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 import Swiper, { Navigation, Pagination } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 // Connects to data-controller="swipe"
 export default class extends Controller {
   connect() {
