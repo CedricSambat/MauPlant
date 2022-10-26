@@ -17,6 +17,10 @@
   width: 200px;
   border-radius: 50%;
   box-shadow: 2px 2px 3px black;
+  display: flex;
+  overflow: auto;
+  mask-image: linear-gradient(to right, transperent 0%, green var(--fade-size) calc(100% -var(-- fade-size)), transparent 100%);
+
 }
 
 // Smallest device
