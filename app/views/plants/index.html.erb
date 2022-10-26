@@ -1,45 +1,39 @@
 Welcome to plants index
+<div data-controller="swipe"></div>
 <div class="swiper">
   <!-- Additional required wrapper -->
+    <div><h1> Fruits</h1></div>
   <div class="swiper-wrapper">
     <!-- Slides -->
     <% @fruits.each do |fruit| %>
       <div class="swiper-slide">
         <%= fruit.name %>
-        <%= cl_image_tag fruit.photo.key %>
+        <%= cl_image_tag fruit.photo.key, style:'width:100vw; height:100vw;' %>
       </div>
     <% end %>
   </div>
 </div>
-
 <div class="swiper">
-  <!-- Additional required wrapper -->
+ <div><h1> Flowers</h1></div>
   <div class="swiper-wrapper">
     <!-- Slides -->
     <% @flowers.each do |flo| %>
       <div class="swiper-slide">
         <%= flo.name %>
-        <%= cl_image_tag flo.photo.key %>
+        <%= cl_image_tag flo.photo.key, style:'width:100vw; height:100vw;' %>
       </div>
     <% end %>
   </div>
 </div>
-
 <div class="swiper">
-  <!-- Additional required wrapper -->
+  <div><h1> Vegetables</h1></div>
   <div class="swiper-wrapper">
     <!-- Slides -->
     <% @vegetables.each do |veg| %>
       <div class="swiper-slide">
         <%= veg.name %>
-        <%= cl_image_tag veg.photo.key %>
+        <%= cl_image_tag veg.photo.key, style:'width:100vw; height:100vw;'  %>
       </div>
     <% end %>
   </div>
 </div>
-
-
-  <!-- If we need navigation buttons -->
-  <%# <div class="swiper-button-prev"></div>
-
-  <div class="swiper-button-next"></div> %>
