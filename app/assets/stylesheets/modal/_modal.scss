@@ -36,13 +36,15 @@
 
 .reminder-h{
 color: #d10808;
-font-size: 20px;
+
 }
 .reminder-g{
-  color:#3e6645
+  color:#3e6645;
+  font-size: 20px;
 }
 .date-rem{
-  color:#326345
+  color:#326345;
+  font-size: 20px;
 }
 .modal-header{
   flex-direction: column;
@@ -66,10 +68,13 @@ font-size: 20px;
 }
 .red {
   color:#d10808;
+  font-size:20px;
 }
 .plant-imag{
-  height: 30px;
-  width: 30px;
+  height: 45px;
+  width: 45px;
   right: 58px;
-  border-radius: 32px;
+  border-radius: 45px;
+  margin-left:20px;
+
 }
