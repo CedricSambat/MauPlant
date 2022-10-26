@@ -1,0 +1,30 @@
+.plant img{
+  height: 533px;
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 401px;
+}
+.plant-name h2{
+  padding-left: 2px;
+  /* border-bottom: double; */
+  border-radius: 14px;
+  background: #b0cfbbda;
+  margin-top: -7px;
+  margin-left: 10px;
+  margin-right: 182px;
+  position: fixed;
+}
+.plant-container{
+  margin: 9px;
+  background-color: #fff;
+  border-radius: 22px;
+  box-shadow: revert-layer;
+  overflow: hidden;
+  width: 394px;
+  height: 792px;
+}
+.plant-des{
+  margin-top: 57px;
+  margin-bottom: 2rem;
+}

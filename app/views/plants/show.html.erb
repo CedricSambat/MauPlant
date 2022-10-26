@@ -1,4 +1,11 @@
-<h2><%= @plant.name %></h2>
-<p><%= @plant.category %></p>
-<p><%= @plant.description %></p>
-
+<div class="plant-container">
+ <div class="plant">
+   <p><%= cl_image_tag @plant.photo.key %></p>
+ </div>
+ <div class="plant-name">
+   <h2><%= @plant.name %></h2>
+ </div>
+ <div class="plant-des">
+   <p><%=  @plant.description %></p>
+  </div>
+</div>

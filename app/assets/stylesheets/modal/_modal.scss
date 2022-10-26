@@ -5,17 +5,19 @@
   color: rgb(3, 3, 3);
   cursor: pointer;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 500px;
   height: 3em;
   line-height: 3em;
-  padding: 0 1em;
+  padding: 0 8em;
+  font-size:19px;
+  border: none;
 }
 
 .reminder{
   background: #3e6645;
   position: fixed;
-  top: 221px;
-  left: 62px;
+  top: 228px;
+  left: 49px;
   height: 67px;
   width: 214px;
   font-size: 25px;
@@ -49,11 +51,6 @@ color: #d10808;
 .modal-header{
   flex-direction: column;
   background-color:#d3e6da ;
-  background-image: url("https://images.pexels.com/photos/8205506/pexels-photo-8205506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  .background-image{
-    display:fixed;
-    width: 10px;
-  }
 }
 
 .modal-title{

@@ -3,7 +3,7 @@
     <div class="card_in d-flex">
       <div class="container">
         <h1>Mau<span class="auto"></span></h1>
-        <p>To plant a garden is to believe in tomorrow</p>
+        <p>To plant a tree is to believe in tomorrow</p>
       </div>
 
 <!-- Button trigger modal -->
@@ -17,10 +17,12 @@
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title " id="exampleModalLabel">Reminder</h5>
-          <%# <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> %>
-        </div>
+       <div>
+          <div class="modal-header">
+           <%# <img src="https://images.pexels.com/photos/8205506/pexels-photo-8205506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> %>
+           <h5 class="modal-title " id="exampleModalLabel" >Reminder</h5>
+          </div>
+       </div>
         <div class="modal-body list">
           <% @gardens.each do |garden|%>
             <li><%= link_to garden.name, garden_path(garden),class: "modal-name" %> <br> <li>
@@ -68,7 +70,7 @@
 
       <%=link_to plants_path do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666294981/Mauplant/plants/ceyda-ciftci-dDVU6D_6T80-unsplash_zwu1et.jpg)">
-        <%= link_to "plants","/plants", class: "link"%>
+        <h2 class="link">Plants</h2>
         </div>
       <% end %>
     </div>
