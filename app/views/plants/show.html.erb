@@ -1,5 +1,14 @@
-<div><%= cl_image_tag @plant.photo.key %></div>
-
-<h2><%= @plant.name %></h2>
-<p><%= @plant.category %></p>
-<p><%= @plant.description %></p>
+<div class="plant">
+  <div class="plant-photo">
+   <%= cl_image_tag @plant.photo.key %>
+  </div>
+  <div class="plant-name">
+   <h1><%= @plant.name %></h1>
+  </div>
+  <div class="plant-cat">
+   <h2><%= @plant.category %></h2>
+  </div>
+ <div class="plant-des">
+   <h2><%= @plant.description %></h2>
+ </div>
+</div>
