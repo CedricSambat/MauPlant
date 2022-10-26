@@ -43,7 +43,7 @@ class GardensController < ApplicationController
     @garden = Garden.new(garden_params)
     @garden.user = @user
     if @garden.save
-      redirect_to garden_path(@garden)
+      redirect_to gardens_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -58,7 +58,7 @@ class GardensController < ApplicationController
   private
 
   def garden_params
-    params.require(:garden).permit(:reminder, :user, :latitude, :longtude, :address, :name)
+    params.require(:garden).permit(:reminder, :user, :latitude, :longtude, :address, :name, :photo)
   end
 
   def set_list

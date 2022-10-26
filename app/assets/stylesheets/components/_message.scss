@@ -1,15 +1,17 @@
 .message-row {
   margin-bottom: 10px;
   padding: 8px;
+  margin-top: 6px;
 }
 
 // To style the message itself
 .sender-style, .receiver-style {
   width: 70%;
   max-width: 400px;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 8px;
   min-height: 80px;
+  object-fit: cover;
 }
 
 .sender-style {
@@ -19,3 +21,15 @@
 .receiver-style {
   background-color: rgb(119, 167, 146);
 }
+
+.message-form {
+  padding-top: 4px;
+  margin-top: 9px;
+}
+
+.messages img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+

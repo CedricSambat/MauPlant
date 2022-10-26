@@ -9,6 +9,7 @@
 require "open-uri"
 
 puts "cleaning database"
+
 Message.destroy_all
 GardenPlant.destroy_all
 Plant.destroy_all
@@ -27,8 +28,8 @@ plant1.photo.attach(io: file, filename: "Mandarin.jpg", content_type: "image/jpg
 plant1.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267686/fc978a8aeab608b13a2ef8214a48daca_llzbqp.jpg")
-plant2 = Plant.new(name: "Litchee", description:"lorem ipsum", category:"fruit")
-plant2.photo.attach(io: file, filename: "litchee.jpg", content_type: "image/jpg")
+plant2 = Plant.new(name: "Litchi", description:"Lychees should not be in standing water, as it will stunt their growth. Newly planted trees should be watered 2 to 3 times a week during the first weeks of planting", category:"fruit")
+plant2.photo.attach(io: file, filename: "litchi.jpg", content_type: "image/jpg")
 plant2.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267721/75515e14b04666e60d3df1b32dfc7d31_c97fja.jpg")
@@ -153,5 +154,5 @@ plant26 = Plant.new(name: "Red Roses", description:"lorem ipsum", category:"flow
 plant26.photo.attach(io: file, filename: "Red_Roses.jpg", content_type: "image/jpg")
 plant26.save
 
-chatroom1 = Chatroom.new(name: "test")
+chatroom1 = Chatroom.new(name: "Forum")
 chatroom1.save
