@@ -9,7 +9,6 @@
 require "open-uri"
 
 puts "cleaning database"
-Chatroom.destroy_all
 Message.destroy_all
 GardenPlant.destroy_all
 Plant.destroy_all
