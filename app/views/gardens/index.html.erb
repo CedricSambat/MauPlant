@@ -24,11 +24,10 @@
             <% @gardens.each do |garden|%>
               <div class="garden_name"><%= garden.name %></div>
               <%= link_to garden_path(garden), class: "btn_gardens btn btn-outline-success" do %>
-                <img src="https://res.cloudinary.com/dfz9nuknq/image/upload/v1666349712/Mauplant/plants/istockphoto-1327986655-2048x2048_srd3sa.jpg" />
+                <%= cl_image_tag garden.photo.key, height: 300, width: 400, crop: :fill %>
               <% end %>
             <%end%>
           </div>
-          <div class="des_gardens"><h1>Plants 12</h1></div>
         </div>
       <div class="btn_garden"><%= link_to "Create Garden", new_garden_path %></div>
     </div>
