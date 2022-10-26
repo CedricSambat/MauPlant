@@ -8,7 +8,7 @@
   font-weight: 500;
   height: 3em;
   line-height: 3em;
-  padding: 0 1em;
+  padding: 0 10em;
 }
 
 .reminder{
@@ -49,11 +49,6 @@ color: #d10808;
 .modal-header{
   flex-direction: column;
   background-color:#d3e6da ;
-  background-image: url("https://images.pexels.com/photos/8205506/pexels-photo-8205506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  .background-image{
-    display:fixed;
-    width: 10px;
-  }
 }
 
 .modal-title{
