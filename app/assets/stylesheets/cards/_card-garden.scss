@@ -15,17 +15,6 @@
 .card-product .card-garden-infos {
     padding: 16px;
   }
-.form-control{
-  border-radius: 50px;
-
-  }
-.search-form-control {
-    position: relative;
-    align-items: center;
-    width: 357px;
-    padding-right: -18px;
-    margin-left: 23px;
-  }
 .card-trip {
   overflow: hidden;
   background: white;
@@ -41,8 +30,8 @@
     width: 377px;
     display: flex;
     border-radius: 18px;
-
     margin-left: -4px;
+
   }
 .card-trip h2 {
   font-size: 16px;
@@ -69,13 +58,18 @@
 .btn_garden{
   background-color: #fdfffe;
   border: 1px solid #4A4A4A;
-  border-radius: 50px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
-  width: 120px;
-  margin-left: 140px;
-
+  width: 366px;
+  margin-left: 27px;
+  }
+  .btn_garden a{
+    text-decoration: none;
+    color: #9c0000;
+    padding-left: 127px;
   }
 .title{
   margin-top: 23px;
@@ -98,6 +92,52 @@
 .background_1{
   height: 231px;
   }
-background_l{
+.background_l{
  padding-top: 10px;
+ height: 620px;
+}
+//seach_garden
+  .seach{
+    border-radius: 15px;
+    background: rgba(255,255,255, 0.2);
+    margin-left: 5px;
+    border-color: white;
+    color:#fdfffe;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 64px;
   }
+.seach_bar{
+  width: 350px;
+  margin-left: 33px;
+}
+.input-seach{
+  background-color: transparent;
+  border: 0;
+  outline: 0.5px;
+  padding: 24px,24px;
+  color: #fdfffe;
+
+}
+::placeholder{
+  color: #fdfffe;
+}
+//90
+.title_hel{
+  padding-bottom: 25px;
+  margin-left: 25px;
+  margin-top: 26px;
+}
+
+.garden_name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 23px;
+}
+.des_gardens{
+  padding-left: 51px;
+}
+.des_gardens h1{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
