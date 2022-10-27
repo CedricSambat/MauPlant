@@ -28,7 +28,7 @@ plant1.photo.attach(io: file, filename: "Mandarin.jpg", content_type: "image/jpg
 plant1.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267686/fc978a8aeab608b13a2ef8214a48daca_llzbqp.jpg")
-plant2 = Plant.new(name: "Litchi", description:"Lychees should not be in standing water, as it will stunt their growth. Newly planted trees should be watered 2 to 3 times a week during the first weeks of planting", category:"fruit")
+plant2 = Plant.new(name: "Litchee", description:"Litchees should not be in standing water, as it will stunt their growth. Newly planted trees should be watered 2 to 3 times a week during the first weeks of planting", category:"fruit")
 plant2.photo.attach(io: file, filename: "litchi.jpg", content_type: "image/jpg")
 plant2.save
 
@@ -81,7 +81,7 @@ plant11.photo.attach(io: file, filename: "grape.jpg", content_type: "image/jpg")
 plant11.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267850/b48bd1329d34f40610561657b433a65b_xtqz0y.jpg")
-plant13 = Plant.new(name: "Cocumber", description:"Water slowly in the morning or early afternoon, and avoid getting the leaves wet, as that may encourage leaf diseases that can ruin the plant. If possible, water your cucumbers with a soaker hose or drip irrigation to keep the foliage dry. Mulch around plants to retain soil moisture.", category:"vegetable")
+plant13 = Plant.new(name: "Cucumber", description:"Water slowly in the morning or early afternoon, and avoid getting the leaves wet, as that may encourage leaf diseases that can ruin the plant. If possible, water your cucumbers with a soaker hose or drip irrigation to keep the foliage dry. Mulch around plants to retain soil moisture.", category:"vegetable")
 plant13.photo.attach(io: file, filename: "cocumber.jpg", content_type: "image/jpg")
 plant13.save
 
@@ -119,7 +119,7 @@ plant20.save
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267890/carrots-in-soil_pylglk.jpg")
 plant16 = Plant.new(name: "Carrots", description:"About an inch of water each week should be enough for your growing carrots. Keep the soil evenly moist to ensure that your plants germinate and grow together. Overwatering will promote hairy roots and forking, so to keep even moisture without overwatering try mulching around your carrots to help conserve moisture.", category:"vegetable")
 plant16.photo.attach(io: file, filename: "Carrots.jpg", content_type: "image/jpg")
-plant16.saves
+plant16.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268003/fe61b5adb4f765f51ecc2fc15927d8c7_orhrnw.jpg")
 plant21 = Plant.new(name: "Marigold", description:"Keep the soil moist, especially during prolonged dry periods, giving plants a thorough water once a week. Plants in containers will probably need watering every day or every other day during summer.", category:"flower")
