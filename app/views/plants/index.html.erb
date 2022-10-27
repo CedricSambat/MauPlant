@@ -1,15 +1,15 @@
 <div data-controller="swipe"></div>
 <div class="swiper">
   <!-- Additional required wrapper -->
-  <h1> Fruits</h1>
-  <div class="swiper-wrapper">
+  <div class = "plant-category-title"><h1> Fruits</h1></div>
+  <div class="swiper-wrapper decoration-text">
     <!-- Slides -->
     <% @fruits.each do |fruit| %>
-      <div class="swiper-slide text-decoration-none">
+      <div class="swiper-slide ">
         <%= link_to plant_path(fruit) do %>
           <div class="card-plant-single">
-            <%= fruit.name %>
-            <%= cl_image_tag fruit.photo.key, style:'width:100vw; height:100vw;' %>
+            <h3><%= fruit.name %></h3>
+            <%= cl_image_tag fruit.photo.key, class:'swiper-images'%>
           </div>
         <% end %>
       </div>
@@ -18,15 +18,15 @@
 </div>
 
 <div class="swiper">
- <div><h1> Flowers</h1></div>
+ <div class = "plant-category-title"><h1> Flowers</h1></div>
   <div class="swiper-wrapper">
     <!-- Slides -->
     <% @flowers.each do |flo| %>
       <div class="swiper-slide text-decoration-none">
        <%= link_to plant_path(flo) do %>
        <div class="card-plant-single">
-        <%= flo.name %>
-        <%= cl_image_tag flo.photo.key, style:'width:100vw; height:100vw;' %>
+         <h3><%= flo.name %></h3>
+        <%= cl_image_tag flo.photo.key, class:'swiper-images' %>
       </div>
     <% end %>
   </div>
@@ -35,15 +35,15 @@
 
 
 <div class="swiper">
-  <div><h1> Vegetables</h1></div>
+  <div class = "plant-category-title"><h1> Vegetables</h1></div>
   <div class="swiper-wrapper">
     <!-- Slides -->
     <% @vegetables.each do |veg| %>
       <div class="swiper-slide text-decoration-none">
       <%= link_to plant_path(veg) do %>
       <div class="card-plant-single">
-        <%= veg.name %>
-        <%= cl_image_tag veg.photo.key, style:'width:100vw; height:100vw;'  %>
+        <h3><%= veg.name %></h3>
+        <%= cl_image_tag veg.photo.key,class:'swiper-images'%>
       </div>
     <% end %>
   </div>
