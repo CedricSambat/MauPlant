@@ -1,22 +1,24 @@
 .plant img{
-  height: 533px;
+  height: 300px;
   /* display: block; */
-  margin-left: auto;
-  margin-right: auto;
-  width: 401px;
-  object-fit: cover;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 6px 6px 9px #b2ebc6;
+  padding: 8px 8px;
+}
+.plant-name h2{
+
+  /* border-bottom: double; */
+  border-radius: 10px;
+  margin-top: 4%;
+  font-size: 2.5rem;
 }
 .plant-name h2{
   border-radius: 10px;
-  background: #5dbd7fda;
-  margin-top: 3px;
-  margin-left: 21px;
-  margin-right: 21px;
-  position: sticky;
-  margin-bottom: 38px;
-  text-align: center;
-  font-size:32px;
+  margin-top: 4%;
+  font-size: 2.5rem;
 }
+
 .plant-container{
   margin: 9px;
   background-color: #fff;
@@ -27,12 +29,7 @@
   height: 792px;
 }
 .plant-des{
-  margin-top: -28px;
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-right: 14px;
-  font-size: 14px;
-  padding-left: 10px;
-  padding-right: 1px;
+  // margin-top: 57px;
+  // margin-bottom: 2rem;
 }
 
