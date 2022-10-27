@@ -1,9 +1,10 @@
 
 <div class="conatainer_">
- <div class="card">
+  <div class="card">
     <div class="background_1" style="background-image: linear-gradient(rgba(0,70,0,0.6), rgba(0,8,51,0.9)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666656811/Mauplant/plants/photo-1514053026555-49ce8886ae41_f6sbni.avif)">
-      <div class="title_hel"><h1>Hello,</h1>
-          <h2>Gardeners</h2>
+      <div class="title_hel">
+        <h1>Hello,</h1>
+        <h2>Gardeners</h2>
       </div>
       <%= form_with url: gardens_path, method: :get, class: " seach_bar d-flex" do %>
         <%= text_field_tag :query,
@@ -13,31 +14,32 @@
         %>
       <i class="seach_bar fa-solid fa-magnifying-glass"><%submit_tag%></i>
       <% end %>
-     </div>
- </div>
+    </div>
+  </div>
 
   <div class="card-gardens">
     <div class="background_l" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666656529/Mauplant/plants/photo-1459156212016-c812468e2115_b6d1xe.avif)">
       <div class="container_g">
         <div class="card_g">
-        <div class="add_garden-links d-flex">
+          <div class="add_garden-links d-flex">
             <a href="/gardens/new">
-            <span class ="garden_icon">
+              <span class ="garden_icon">
               <i class="btn_add fa-solid fa-circle-plus "></i>
-            </span>
+              </span>
             </a>
           </div>
           <div class="card-header">
             <% @gardens.each do |garden|%>
-              <div class="garden_name"><%= garden.name %></div>
-              <%= link_to garden_path(garden), class: "btn_gardens btn btn-outline-success" do %>
+              <div class="garden_n"><%= garden.name %></div>
+              <%= link_to garden_path(garden), class: " btn " do %>
                 <%= cl_image_tag garden.photo.key, height: 300, width: 400, crop: :fill %>
               <% end %>
             <%end%>
             <div class="btn_garden"><%= link_to "Create Garden", new_garden_path %></div>
           </div>
         </div>
-      <div class="btn_garden"></div>
+      </div>
+      <div class=""></div>
     </div>
   </div>
 </div>
