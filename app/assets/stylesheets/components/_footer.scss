@@ -1,6 +1,7 @@
 .footer {
   background:white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 70px;
@@ -8,6 +9,7 @@
   // padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   border-radius: 10px;
+  margin-top: 366px;
 }
 .footer ul{
   display: flex;

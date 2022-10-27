@@ -1,11 +1,14 @@
-Create Garden
 <div class="containers">
   <div class="form_g">
-    <%= simple_form_for(@garden) do |f| %>
-      <%= f.input :name %>
-      <%= f.input :reminder %>
-      <%= f.input :photo, as: :file %>
-      <%= f.submit %>
+    <div class="input">
+      <div class="subtitle">Let's create your garden!</div>
+      <%= simple_form_for(@garden) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :reminder, html5: true %>
+        <%= f.input :photo, as: :file %>
+        <div class="submit"><%= f.submit %></div>
+    </div>
     <% end %>
   </div>
 </div>
+
