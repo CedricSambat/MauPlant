@@ -55,27 +55,22 @@
   }
 
 //btn create
-.btn_garden{
-  background-color: #fdfffe;
-  border: 1px solid #4A4A4A;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  width: 366px;
-  margin-left: 27px;
-  }
-  .btn_garden a{
-    text-decoration: none;
-    color: #9c0000;
-    padding-left: 127px;
-  }
+.add_garden, span{
+  color: #3a5a40;
+}
+.btn_add{
+  font-size: 60px;
+}
 .title{
   margin-top: 23px;
     margin-left: 22px;
     margin-bottom: 18px;
   }
+.d-flex{
+  justify-content: space-around;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
 .conatainer_gardens{
   background-color: aquamarine;
   }
@@ -109,17 +104,17 @@
 .seach_bar{
   width: 350px;
   margin-left: 33px;
+  margin-top: 5px;
 }
 .input-seach{
-  background-color: transparent;
-  border: 0;
-  outline: 0.5px;
+ border-radius: 15px;
+  // outline: 0.5px;
   padding: 24px,24px;
-  color: #fdfffe;
+  color: #0a0a0a;
 
 }
 ::placeholder{
-  color: #fdfffe;
+  color: #fefefe;
 }
 //90
 .title_hel{
@@ -128,12 +123,7 @@
   margin-top: 26px;
 }
 
-.garden_name{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  font-size: 23px;
-}
+
 .des_gardens{
   padding-left: 51px;
 }
