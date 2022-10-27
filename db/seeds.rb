@@ -69,88 +69,85 @@ plant9.photo.attach(io: file, filename: "Pineapple.jpg", content_type: "image/jp
 plant9.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267824/1000_F_91680839_JwEVYgOYVAqZTjASnkZTnsAgt3yM45ED_jdvpwu.jpg")
-plant10 = Plant.new(name: "Pear", description:"", category:"fruit")
+plant10 = Plant.new(name: "Pear", description:"Pear trees are a great addition to a yard or landscape. Pears are delicate, however, and too much or too little watering can lead to yellowing or dropped leaves and subpar fruit
+
+Read more at Gardening Know How: Pear Tree Irrigation: Tips On Watering A Pear Tree https://www.gardeningknowhow.com/edible/fruits/pear/watering-a-pear-tree.htm", category:"fruit")
 plant10.photo.attach(io: file, filename: "pear.jpg", content_type: "image/jpg")
 plant10.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267813/1e3dbd284a9eb7c3e939622bd0c4f422_obie6d.jpg")
-plant11 = Plant.new(name: "Grape", description:"lorem ipsum", category:"fruit")
+plant11 = Plant.new(name: "Grape", description:"Young grapes require about 1/2 to 1 inch of water per week, depending on rainfall", category:"fruit")
 plant11.photo.attach(io: file, filename: "grape.jpg", content_type: "image/jpg")
 plant11.save
 
-file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267839/8a88aacd48b3eabbf7cba3f6110128b1_xns6af.jpg")
-plant12 = Plant.new(name: "Potato", description:"lorem ipsum", category:"vegetable")
-plant12.photo.attach(io: file, filename: "potato.jpg", content_type: "image/jpg")
-plant12.save
-
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267850/b48bd1329d34f40610561657b433a65b_xtqz0y.jpg")
-plant13 = Plant.new(name: "Cocumber", description:"lorem ipsum", category:"vegetable")
+plant13 = Plant.new(name: "Cocumber", description:"Water slowly in the morning or early afternoon, and avoid getting the leaves wet, as that may encourage leaf diseases that can ruin the plant. If possible, water your cucumbers with a soaker hose or drip irrigation to keep the foliage dry. Mulch around plants to retain soil moisture.", category:"vegetable")
 plant13.photo.attach(io: file, filename: "cocumber.jpg", content_type: "image/jpg")
 plant13.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267863/eb3b4e976d45ca902904ac28650717af_w73dsr.jpg")
-plant14 = Plant.new(name: "Cabbage", description:"lorem ipsum", category:"vegetable")
+plant14 = Plant.new(name: "Cabbage", description:"Let the sunshine in: Cabbages need full sun – at least six to eight hours of direct sunlight per day. Water wisely: It's best to water in the morning and at the base of the plant (soil level) keeping the foliage dry. Plants should be watered when the top 2 inches of the soil becomes dry to the touch.", category:"vegetable")
 plant14.photo.attach(io: file, filename: "cabbage.jpg", content_type: "image/jpg")
 plant14.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267875/d50180be5f8b83eb52f1aa7e1719fc7b_tkei6a.jpg")
-plant15 = Plant.new(name: "Lettuce", description:"lorem ipsum", category:"vegetable")
+plant15 = Plant.new(name: "Lettuce", description:"Lettuce has shallow roots, so plants need consistent watering. Check at least twice a week and water if the soil is dry down to 1 inch deep. Containers of lettuce need to be watered more frequently than garden beds, especially in the summer", category:"vegetable")
 plant15.photo.attach(io: file, filename: "lettuce.jpg", content_type: "image/jpg")
 plant15.save
 
-file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267890/carrots-in-soil_pylglk.jpg")
-plant16 = Plant.new(name: "Carrots", description:"lorem ipsum", category:"vegetable")
-plant16.photo.attach(io: file, filename: "Carrots.jpg", content_type: "image/jpg")
-plant16.save
-
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267962/240_F_169305319_ocVsDjvATOkwU1vnhXJcRGTzVehRVSr9_dq8zzw.jpg")
-plant17 = Plant.new(name: "Capcicum", description:"lorem ipsum", category:"vegetable")
-plant17.photo.attach(io: file, filename: "Capcicum.jpg", content_type: "image/jpg")
+plant17 = Plant.new(name: "Bell Pepper", description:"Watering: Soak the soil thoroughly when watering. On average, they will need an inch of water per week, coming from rain and/or from irrigation. While peppers need a moist soil, a soggy soil can lead to root rot, so check the soil before watering", category:"vegetable")
+plant17.photo.attach(io: file, filename: "BellPepper.jpg", content_type: "image/jpg")
 plant17.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267940/1000_F_240969248_tL666JKRYq8ecSiVTEehEesDW7Ss9YTt_xs4kes.jpg")
-plant18 = Plant.new(name: "Eggplant", description:"lorem ipsum", category:"vegetable")
+plant18 = Plant.new(name: "Eggplant", description:"Water eggplant deeply and infrequently, applying 1-2 inches per week. Use drip irrigation if possible. Mulching around the plant will conserve soil moisture and reduce weed growth. Irrigate so that moisture goes deeply into the soil.", category:"vegetable")
 plant18.photo.attach(io: file, filename: "Eggplant.jpg", content_type: "image/jpg")
 plant18.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267975/240_F_65127874_BdEFCjM2tSqB1FdA8NnE5IF6ozio95VA_pldl0j.jpg")
-plant19 = Plant.new(name: "Spinach", description:"lorem ipsum", category:"vegetable")
+plant19 = Plant.new(name: "Spinach", description:"To speed up the germination then soak the seeds overnight in water. Growing water spinach from cuttings is the easiest method to propagate it. Just cut several 30 to 40cm long cuttings from young growth and plant 15 cm deep in potting mix. Water spinach can be grown from seed, often soaked for 24 hours before sowing.", category:"vegetable")
 plant19.photo.attach(io: file, filename: "spinach.jpg", content_type: "image/jpg")
 plant19.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267993/1000_F_277530247_iWPLqhh85Zsmfasd3w15NzmiZrX6U6W2_fvunde.jpg")
-plant20 = Plant.new(name: "Mint", description:"lorem ipsum", category:"vegetable")
-plant20.photo.attach(io: file, filename: ".jpg", content_type: "image/jpg")
+plant20 = Plant.new(name: "Mint", description:"Water the plant only when the soil feels dry to the touch and the pot is light. To water indoor mint plants, move the pot to the sink or bathtub, turn on the water, and let it flush through the soil and exit the drainage hole in the bottom of the pot.", category:"vegetable")
+plant20.photo.attach(io: file, filename: "Mint.jpg", content_type: "image/jpg")
 
 plant20.save
 
+file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666267890/carrots-in-soil_pylglk.jpg")
+plant16 = Plant.new(name: "Carrots", description:"About an inch of water each week should be enough for your growing carrots. Keep the soil evenly moist to ensure that your plants germinate and grow together. Overwatering will promote hairy roots and forking, so to keep even moisture without overwatering try mulching around your carrots to help conserve moisture.", category:"vegetable")
+plant16.photo.attach(io: file, filename: "Carrots.jpg", content_type: "image/jpg")
+plant16.saves
+
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268003/fe61b5adb4f765f51ecc2fc15927d8c7_orhrnw.jpg")
-plant21 = Plant.new(name: "Marigold", description:"lorem ipsum", category:"flower")
-plant21.photo.attach(io: file, filename: ".jpg", content_type: "image/jpg")
+plant21 = Plant.new(name: "Marigold", description:"Keep the soil moist, especially during prolonged dry periods, giving plants a thorough water once a week. Plants in containers will probably need watering every day or every other day during summer.", category:"flower")
+plant21.photo.attach(io: file, filename: "Marigold.jpg", content_type: "image/jpg")
 plant21.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268035/0a16e41dc98a48c11555375fcc9a1f0f_oethwk.png")
-plant22 = Plant.new(name: "Roses", description:"lorem ipsum", category:"flower")
-plant22.photo.attach(io: file, filename: ".jpg", content_type: "image/jpg")
+plant22 = Plant.new(name: "Roses", description:"It is best to water as close to base of the rose as you can. If the water is starting to flow away from the base, stop for a moment to allow the water to soak in, then continue. Don't water over the flowers or foliage. Watering foliage can encourage disease problems, particularly if it remains on the leaves overnight.", category:"flower")
+plant22.photo.attach(io: file, filename: "Roses.jpg", content_type: "image/jpg")
 plant22.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268050/756e3e7e27f4278fc86d4d950c8a85fd_xluj6c.png")
-plant23 = Plant.new(name: "Hibiscus", description:"lorem ipsum", category:"flower")
-plant23.photo.attach(io: file, filename: "Roses.png", content_type: "image/jpg")
+plant23 = Plant.new(name: "Hibiscus", description:"Keep the soil surrounding the hibiscus moist but not soggy. For the first week after planting, water daily, tapering off to once every two days in the second week, and then about twice a week thereafter, when there is no rainfall. If the weather becomes especially hot and dry, water every other day.", category:"flower")
+plant23.photo.attach(io: file, filename: "Hibiscus.png", content_type: "image/jpg")
 plant23.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268080/3ce9f5af57c97bfdcd53cdb878c48ce9_nyd7u5.jpg")
-plant24 = Plant.new(name: "Jasmin", description:"lorem ipsum", category:"flower")
+plant24 = Plant.new(name: "Jasmin", description:"Jasmine flowers that are in-ground should be watered once a week. If it is unusually dry or hot, increase the frequency, but let the soil dry out in between. If your jasmine is in a container, it will likely require water multiple times each week, especially in the hotter months.", category:"flower")
 plant24.photo.attach(io: file, filename: "Jasmin.jpg", content_type: "image/jpg")
 plant24.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268111/Bridal_Sunblaze_C2_AE_004_urhupx.jpg")
-plant25 = Plant.new(name: "White Roses", description:"lorem ipsum", category:"flower")
+plant25 = Plant.new(name: "White Roses", description:"It is best to water as close to base of the rose as you can. If the water is starting to flow away from the base, stop for a moment to allow the water to soak in, then continue. Don't water over the flowers or foliage. Watering foliage can encourage disease problems, particularly if it remains on the leaves overnight", category:"flower")
 plant25.photo.attach(io: file, filename: "White_Roses.jpg", content_type: "image/jpg")
 plant25.save
 
 file = URI.open("https://res.cloudinary.com/dfz9nuknq/image/upload/v1666268122/red-rose_jnq4yz.jpg")
-plant26 = Plant.new(name: "Red Roses", description:"lorem ipsum", category:"flower")
+plant26 = Plant.new(name: "Red Roses", description:"It is best to water as close to base of the rose as you can. If the water is starting to flow away from the base, stop for a moment to allow the water to soak in, then continue. Don't water over the flowers or foliage. Watering foliage can encourage disease problems, particularly if it remains on the leaves overnight", category:"flower")
 plant26.photo.attach(io: file, filename: "Red_Roses.jpg", content_type: "image/jpg")
 plant26.save
 
