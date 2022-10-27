@@ -1,26 +1,28 @@
 
-<div class="wrapper">
-  <div class="">
-    <%= @garden.name %>
-    <%= @garden.reminder.strftime('%a %d %b %Y')%>
-<div class="container_garden_show">
-  <div class="card_garden">
-    <div class="garden-name"><%= @garden.name %></div>
-    <br>
-      <div class="card-plant">
+<div class="garden">
+ <div class="gard-container">
+   <div class="garden-name-rem">
+     <%= @garden.name %>
+     <%= @garden.reminder.strftime('%a %d %b %Y')%>
+   </div>
+   <div class="gard-card">
+     <%# <div class="garden-name"><%= @garden.name %>
+     <br>
+      <div class="garden-plant">
         <% @myplants.each do |myplant|%>
           <% plant = myplant.plant %>
-          <%= plant.name %>
-          <%= cl_image_tag plant.photo.key %>
+          <div class="plant-name"><%= plant.name %></div>
+          <div class="plant-im"><%= cl_image_tag plant.photo.key %></div>
           <%= link_to "Remove Plant", garden_plant_path(myplant),
           data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary"%>
-          <br>
+         <br>
         <% end %>
       </div>
+    </div>
   </div>
   <%= link_to "Delete Garden",garden_path(@garden),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
- <%= link_to "Add a plant", new_garden_garden_plant_path(@garden), class: "btn btn-primary" %>
+  <%= link_to "Add a plant", new_garden_garden_plant_path(@garden), class: "btn btn-primary" %>
   <%# btn reminder %>
   <%= link_to "edit reminder",edit_garden_path(@garden), class: "btn btn-primary"%>
 </div>
