@@ -1,34 +1,44 @@
 .plant img{
-  height: 300px;
-  /* display: block; */
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 6px 6px 9px #b2ebc6;
-  padding: 8px 8px;
+  height: 383px;
+    /* display: block; */
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 19px 10px 24px #b2ebc6;
+    padding: 25px 23px;
+    object-fit: cover;
 }
 .plant-name h2{
-
-  /* border-bottom: double; */
+  // * border-bottom: double; */
   border-radius: 10px;
   margin-top: 4%;
   font-size: 2.5rem;
+  font-size: 35px;
+  text-align: start;
+  padding: 18px;
 }
-.plant-name h2{
-  border-radius: 10px;
-  margin-top: 4%;
-  font-size: 2.5rem;
-}
+// .plant-name h2{
+//   border-radius: 10px;
+//   margin-top: 4%;
+//   font-size: 2.5rem;
+// }
 
 .plant-container{
   margin: 9px;
   background-color: #fff;
   border-radius: 22px;
   box-shadow: revert-layer;
-  overflow: hidden;
+  overflow: scroll;
   width: 394px;
-  height: 640px;
+  height: 724px;
 }
-.plant-des{
-  // margin-top: 57px;
-  // margin-bottom: 2rem;
+
+.plant-des p{
+  font-size: 20px;
+  padding: -9px;
+  margin: 27px;
+  /* overscroll-behavior: auto; */
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
