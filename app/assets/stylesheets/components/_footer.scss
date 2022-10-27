@@ -38,9 +38,9 @@
   transition: 0.5s;
   color: var(--clr);
 }
-.footer ul li:hover a .icon {
-transform: translateY(-32px);
-}
+// .footer ul li:hover a .icon {
+// transform: translateY(-32px);
+// }
 .footer ul li a .text {
   position: absolute;
   color: var(--clr);
@@ -51,7 +51,7 @@ transform: translateY(-32px);
   opacity: 0;
   transform: translateY(20px);
   }
-  .footer ul li:hover a .text {
-  opacity: 1;
-  transform: translateY(10px);
-  }
+  // .footer ul li:hover a .text {
+  // opacity: 1;
+  // transform: translateY(10px);
+  // }
