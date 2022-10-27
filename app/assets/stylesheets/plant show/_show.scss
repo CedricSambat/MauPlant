@@ -4,16 +4,18 @@
   margin-left: auto;
   margin-right: auto;
   width: 401px;
+  object-fit: cover;
 }
 .plant-name h2{
-  padding-left: 2px;
-  /* border-bottom: double; */
-  border-radius: 14px;
-  background: #b0cfbbda;
-  margin-top: -7px;
-  margin-left: 10px;
-  margin-right: 182px;
-  position: fixed;
+  border-radius: 10px;
+  background: #5dbd7fda;
+  margin-top: 3px;
+  margin-left: 21px;
+  margin-right: 21px;
+  position: sticky;
+  margin-bottom: 38px;
+  text-align: center;
+  font-size:32px;
 }
 .plant-container{
   margin: 9px;
@@ -25,6 +27,12 @@
   height: 792px;
 }
 .plant-des{
-  margin-top: 57px;
-  margin-bottom: 2rem;
+  margin-top: -28px;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-right: 14px;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 1px;
 }
+

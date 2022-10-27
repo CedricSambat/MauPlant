@@ -1,26 +1,37 @@
 
-<div class="wrapper">
-  <div class="">
-    <%= @garden.name %>
-    <%= @garden.reminder.strftime('%a %d %b %Y')%>
-<div class="container_garden_show">
-  <div class="card_garden">
-    <div class="garden_name"><%= @garden.name %></div>
-    <br>
-      <div class="card-plant">
+<div class="garden">
+ <div class="gard-container">
+    <div class="garden-text-container">
+      <div class="garden-name-rem">
+        <div>Name:<%= @garden.name %></div>
+        <div> Reminder:<%= @garden.reminder.strftime('%a %d %b %Y')%></div>
+      </div>
+    </div>
+    <div class="d-flex">
+     <%= link_to "Delete Garden",garden_path(@garden),
+     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
+     <%= link_to "Add a plant", new_garden_garden_plant_path(@garden), class: "btn btn-primary" %>
+     <%# btn reminder %>
+     <%= link_to "edit reminder",edit_garden_path(@garden), class: "btn btn-primary"%>
+    </div>
+   <div class="gard-card-container">
+     <%# <div class="garden-name"><%= @garden.name %>
+      <div class="gard-card-items">
         <% @myplants.each do |myplant|%>
           <% plant = myplant.plant %>
-          <%= plant.name %>
-          <%= cl_image_tag plant.photo.key %>
-          <%= link_to "Remove Plant", garden_plant_path(myplant),
-          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary"%>
-          <br>
+          <div class="item-container">
+            <div class="gard-card-photo">
+              <%= cl_image_tag plant.photo.key %>
+              <%= plant.name %>
+              <div class="gard-card-delete">
+                <%= link_to garden_plant_path(myplant), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  do %>
+                  <i class="fa-solid fa-trash"></i>
+                <% end %>
+              </div>
+            </div>
+          </div>
         <% end %>
-      </div>
+      <%# </div>data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    </div>
   </div>
-  <%= link_to "Delete Garden",garden_path(@garden),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
- <%= link_to "Add a plant", new_garden_garden_plant_path(@garden), class: "btn btn-primary" %>
-  <%# btn reminder %>
-  <%= link_to "edit reminder",edit_garden_path(@garden), class: "btn btn-primary"%>
 </div>

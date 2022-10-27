@@ -15,22 +15,22 @@
 
 .reminder{
   background: #3e6645;
-  position: fixed;
-  top: 228px;
-  left: 49px;
+  position: sticky;
+  bottom: 103px;
+  left: 90px;
   height: 67px;
   width: 214px;
   font-size: 25px;
   list-style-type: none;
   color: #98cb32;
-  border-radius: 45px;
+  border-radius: 21px;
 
 }
 .modal-name{
-  color:#4f553e;
+  color: #4f553e;
   font-size: 32px;
   text-decoration: none;
-  margin-left: 87px;
+  margin-left: -7px;
 }
 .list{
   list-style-type: none;
@@ -63,7 +63,7 @@ color: #d10808;
 .modal-footer{
   background-color: #2f7d4d;
 }
-.red {
+.date-rem-red {
   color:#d10808;
   font-size:20px;
 }
