@@ -33,6 +33,10 @@ span{
   grid-gap: 16px;
 
 }
+
+.card_btn a{
+  text-decoration: none;
+}
 .card-category {
   background-size: cover;
   background-position: center;
@@ -75,33 +79,3 @@ span{
   height: 500px;
 }
 // footer
-.footer {
-  background: #F4F4F4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-
-
-  color: rgba(0,0,0,0.3);
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-  color: #46a257;
-}
-// .footer-links a:hover {
-//   opacity: 1;
-
-.link{
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 500;
-}

@@ -5,50 +5,53 @@
         <h1>Mau<span class="auto"></span></h1>
         <p>To plant a tree is to believe in tomorrow</p>
       </div>
+      <!-- Button trigger modal -->
 
-<!-- Button trigger modal -->
-  <% if current_user %>
-    <button type="button" class="btn reminder"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-      <%# <img src="https://images.pexels.com/photos/8205506/pexels-photo-8205506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> %>
-      Reminder
-    </button>
-  <%end %>
-<!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
-      <div class="modal-content">
-       <div>
-          <div class="modal-header">
-           <h5 class="modal-title " id="exampleModalLabel" >Reminder</h5>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+          <div class="modal-content">
+            <div>
+              <div class="modal-header">
+              <h5 class="modal-title " id="exampleModalLabel" >Reminder</h5>
+              </div>
+            </div>
+            <div class="modal-body list">
+              <% @gardens.each do |garden|%>
+                <li><%= link_to garden.name, garden_path(garden),class: "modal-name" %> <li>
+              <% if Time.now - garden.reminder > 0%>
+                  <div class="text">
+                    <div class="date-rem-red"><strong><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
+                    <img src="https://articulate-heroes.s3.amazonaws.com/uploads/rte/pqvxlfws_watering-can.gif"class="plant-imag">
+                  </div>
+                  <div class="date-rem-red"><h3>It's time to water your plant!!!!!</h3></div>
+                <% else %>
+                <div class="text">
+                  <div class="date-rem"><strong><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
+                  <div><img src="https://i.pinimg.com/originals/2e/fb/90/2efb90c0b69884f2a69e67bdf4d6bff7.gif"class="plant-imag"></div>
+                  </div>
+                  <div class="reminder-g"> <h3>You are good to go</h3></div>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary modal-button" data-bs-dismiss="modal">Close</button>
+              <%# <button type="button" class="btn btn-primary">Save changes</button> %>
+            </div>
           </div>
-       </div>
-        <div class="modal-body list">
-          <% @gardens.each do |garden|%>
-            <li><%= link_to garden.name, garden_path(garden),class: "modal-name" %> <br> <li>
-           <% if Time.now - garden.reminder > 0%>
-              <div class="text">
-                <div class="date-rem-red"><strong><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
-                <img src="https://articulate-heroes.s3.amazonaws.com/uploads/rte/pqvxlfws_watering-can.gif"class="plant-imag">
-              </div>
-              <div class="date-rem-red"><h3>It's time to water your plant!!!!!</h3></div>
-            <% else %>
-             <div class="text">
-               <div class="date-rem"><strong><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
-               <div><img src="https://i.pinimg.com/originals/2e/fb/90/2efb90c0b69884f2a69e67bdf4d6bff7.gif"class="plant-imag"></div>
-              </div>
-              <div class="reminder-g"> <h3>You are good to go</h3></div>
-            <% end %>
-          <% end %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary modal-button" data-bs-dismiss="modal">Close</button>
-          <%# <button type="button" class="btn btn-primary">Save changes</button> %>
         </div>
       </div>
+      <div class="card_2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666299216/Mauplant/plants/scott-webb-WwWkgOMU8H8-unsplash_grygry.jpg)">
+      </div>
     </div>
-  </div>
-  <div class="card_2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666299216/Mauplant/plants/scott-webb-WwWkgOMU8H8-unsplash_grygry.jpg)"></div>
-  </div>
+      <div>
+        <% if current_user %>
+          <button type="button" class="btn reminder"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <%# <img src="https://images.pexels.com/photos/8205506/pexels-photo-8205506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> %>
+            Reminder
+          </button>
+        <%end %>
+      </div>
   </div>
   <%# background-image-div %>
   <div class="background" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666287268/Mauplant/plants/scott-webb-hDyO6rr3kqk-unsplash_cxsrnb.jpg)">
@@ -58,14 +61,19 @@
         <h2 class="link">Gardens</h2>
       </div>
     <% end %>
+
     <div class="card_btn">
+      <%=link_to chatroom_path do %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666294878/Mauplant/plants/istockphoto-1323462385-2048x2048_wtfmpm.jpg)">
         <%= link_to "help", chatroom_path(@chatroom), class: "link"%>
       </div>
+
+
       <%=link_to plants_path do %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666294981/Mauplant/plants/ceyda-ciftci-dDVU6D_6T80-unsplash_zwu1et.jpg)">
-        <h2 class="link">Plants</h2>
+          <h2 class="link">Plants</h2>
         </div>
       <% end %>
     </div>
- </div>
+  </div>
+</div>
