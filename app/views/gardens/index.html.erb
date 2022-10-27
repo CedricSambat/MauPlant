@@ -11,7 +11,7 @@
           class: "input-seach",
           placeholder: "Find a garden"
         %>
-        <%= submit_tag "Search", class: "seach" %>
+      <i class="seach_bar fa-solid fa-magnifying-glass"><%submit_tag%></i>
       <% end %>
      </div>
  </div>
@@ -20,6 +20,13 @@
     <div class="background_l" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666656529/Mauplant/plants/photo-1459156212016-c812468e2115_b6d1xe.avif)">
       <div class="container_g">
         <div class="card_g">
+        <div class="add_garden-links d-flex">
+            <a href="/gardens/new">
+            <span class ="garden_icon">
+              <i class="btn_add fa-solid fa-circle-plus "></i>
+            </span>
+            </a>
+          </div>
           <div class="card-header">
             <% @gardens.each do |garden|%>
               <div class="garden_name"><%= garden.name %></div>
@@ -29,7 +36,7 @@
             <%end%>
           </div>
         </div>
-      <div class="btn_garden"><%= link_to "Create Garden", new_garden_path %></div>
+      <div class="btn_garden"></div>
     </div>
   </div>
 </div>
