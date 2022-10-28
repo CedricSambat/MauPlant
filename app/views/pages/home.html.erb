@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <div class="card">
+  <div class="card banner">
     <div class="card_in d-flex">
       <div class="container">
         <h1>Mau<span class="auto"></span></h1>
@@ -17,20 +17,24 @@
               </div>
             </div>
             <div class="modal-body list">
-              <% @gardens.each do |garden|%>
-                <li><%= link_to garden.name, garden_path(garden),class: "modal-name" %> <li>
-              <% if Time.now - garden.reminder > 0%>
-                  <div class="text">
-                    <div class="date-rem-red"><strong><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
-                    <img src="https://articulate-heroes.s3.amazonaws.com/uploads/rte/pqvxlfws_watering-can.gif"class="plant-imag">
-                  </div>
-                  <div class="date-rem-red"><h3>It's time to water your plant!!!!!</h3></div>
-                <% else %>
-                <div class="text">
-                  <div class="date-rem"><strong><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
-                  <div><img src="https://i.pinimg.com/originals/2e/fb/90/2efb90c0b69884f2a69e67bdf4d6bff7.gif"class="plant-imag"></div>
-                  </div>
-                  <div class="reminder-g"> <h3>You are good to go</h3></div>
+              <% if @gardens %>
+                <% @gardens.each do |garden|%>
+                  <li><%= link_to garden.name, garden_path(garden),class: "modal-name" %> <li>
+                  <% if !garden.reminder.nil? %>
+                    <% if (Time.now - garden.reminder > 0)%>
+                      <div class="text">
+                        <div class="date-rem-red"><strong><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
+                        <img src="https://articulate-heroes.s3.amazonaws.com/uploads/rte/pqvxlfws_watering-can.gif"class="plant-imag">
+                      </div>
+                      <div class="date-rem-red"><h3>It's time to water your plant!!!!!</h3></div>
+                    <% else %>
+                      <div class="text">
+                      <div class="date-rem"><strong><%= garden.reminder.strftime('%a %d %b %Y') %></strong></div>
+                      <div><img src="https://i.pinimg.com/originals/2e/fb/90/2efb90c0b69884f2a69e67bdf4d6bff7.gif"class="plant-imag"></div>
+                      </div>
+                      <div class="reminder-g"> <h3>You are good to go</h3></div>
+                    <% end %>
+                  <% end %>
                 <% end %>
               <% end %>
             </div>
