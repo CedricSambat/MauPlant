@@ -8,11 +8,15 @@
       </div>
     </div>
     <div class="d-flex">
-     <%= link_to "Delete Garden",garden_path(@garden),
-     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-primary" %>
-     <%= link_to "Add a plant", new_garden_garden_plant_path(@garden), class: "btn btn-primary" %>
+     <%= link_to "",garden_path(@garden),
+     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "fa-solid fa-trash" %>
+
+    <%= link_to "", new_garden_garden_plant_path(@garden), class: "btn_add fa-solid fa-circle-plus" %>
+
+
      <%# btn reminder %>
-     <%= link_to "edit reminder",edit_garden_path(@garden), class: "btn btn-primary"%>
+     <%= link_to "",edit_garden_path(@garden), class: "fa-solid fa-pen"%>
+
     </div>
    <div class="gard-card-container">
      <%# <div class="garden-name"><%= @garden.name %>
