@@ -2,8 +2,15 @@
 .footer {
   background: #F4F4F4;
   color: rgba(0,0,0,0.3);
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
 
+.footer-block {
+  width: 100vw;
+  height: 86px;
+}
 
 .footer ul{
   display: flex;
@@ -74,4 +81,3 @@
     font-size: 2rem;
     font-weight: 600;
   }
-
