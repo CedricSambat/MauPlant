@@ -6,17 +6,18 @@
         <h1>Hello,</h1>
         <h2>Gardeners</h2>
       </div>
-      <%= form_with url: gardens_path, method: :get, class: " seach_bar d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "input-seach",
-          placeholder: "Find a garden"
-        %>
-      <i class="seach_bar fa-solid fa-magnifying-glass"><%submit_tag%></i>
-      <% end %>
+      <div class="search-container d-flex ">
+        <%= form_with url: gardens_path, method: :get, class: " seach_bar " do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "input-seach",
+            placeholder: "Find a garden"
+          %>
+          <i class="fa-solid fa-magnifying-glass"><%submit_tag%></i>
+        <% end %>
+      </div>
     </div>
   </div>
-
   <div class="card-gardens">
     <div class="background_l" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666656529/Mauplant/plants/photo-1459156212016-c812468e2115_b6d1xe.avif)">
       <div class="container_g">
