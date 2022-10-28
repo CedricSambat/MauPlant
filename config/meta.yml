@@ -1,0 +1,5 @@
+meta_product_name: "MauPlant"
+meta_title: "MauPlant - keep your plant alive"
+meta_description: "Mauplant is an application that help you take care of your plants"
+meta_image: "mauplant.jpg" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
