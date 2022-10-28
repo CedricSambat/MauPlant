@@ -1,5 +1,8 @@
 .form_g{
-display: flex;
+ display: flex;
+ margin: 26px;
+
+ margin-top: 22vh;
 }
 .form {
   background-color: #15172b;
@@ -21,7 +24,7 @@ display: flex;
 .subtitle {
   color: #eee;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 27px;
   font-weight: 600;
   margin-top: 10px;
 }
@@ -46,10 +49,10 @@ display: flex;
   border: 0;
   box-sizing: border-box;
   color: #eee;
-  font-size: 18px;
+  font-size: 23px;
   height: 100%;
   outline: 0;
-  padding: 4px 20px 0;
+  padding: 1px 18px 0;
   width: 100%;
 }
 
