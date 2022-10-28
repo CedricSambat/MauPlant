@@ -75,7 +75,7 @@
   background-color: aquamarine;
   }
 .card{
-  background-color: #074f57;
+  background-color: #3a5a40;
   color: white;
   height: 231px;
   }
@@ -130,4 +130,23 @@
 .des_gardens h1{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 15px;
+}
+.containers_pla{
+  display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 18%;
+    margin-bottom: 118%;
+    object-fit: cover;
+
+}
+.background_pla{
+  display: flex;
+  justify-content: space-around;
+}
+
+.background_plat {
+  display: flex;
+  justify-content: space-around;
+  color: #fdfffe;
 }

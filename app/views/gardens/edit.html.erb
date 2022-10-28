@@ -1,5 +1,12 @@
 
-<%= simple_form_for(@garden) do |f| %>
-  <%= f.input :reminder %>
-  <%= f.submit %>
-<% end %>
+<div class="containers">
+  <div class="form_g">
+    <div class="input">
+      <div class="subtitle">edit reminder!</div>
+      <%= simple_form_for(@garden) do |f| %>
+      <%= f.input :reminder, html5: true %>
+      <div class="submit"><%= f.submit %></div>
+    </div>
+    <% end %>
+  </div>
+</div>

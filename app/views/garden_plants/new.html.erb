@@ -1,8 +1,13 @@
-Create Garden
-<%= simple_form_for([@garden, @garden_plant]) do |f| %>
-  <%= f.input :plant_id, collection: @plants %>
-  <%# <%= f.input :latitude %>
-  <%# <%= f.input :longtude %>
-  <%# <%= f.input :address %>
-  <%= f.submit %>
-<% end %>
+ <div class="background_pla" style="background-image: linear-gradient(rgba(0,70,0,0.6), rgba(0,8,51,0.9)), url(https://res.cloudinary.com/dfz9nuknq/image/upload/v1666656811/Mauplant/plants/photo-1514053026555-49ce8886ae41_f6sbni.avif)">
+    <div class="containers_pla">
+      <div class="form_g">
+        <div class="input">
+          <div class="subtitle">let's add plant to your garden!</div>
+          <%= simple_form_for([@garden, @garden_plant]) do |f| %>
+            <%= f.input :plant_id, collection: @plants %>
+          <div class="submit"><%= f.submit %></div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+ </div>
