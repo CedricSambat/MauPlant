@@ -26,6 +26,10 @@
   border-radius: 8px;
   margin-left: 26px;
 }
+.card-header{
+  overflow: scroll;
+  height: 418px;
+}
 .card-body {
   display: flex;
   flex-direction: column;
