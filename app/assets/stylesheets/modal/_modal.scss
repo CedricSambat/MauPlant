@@ -15,16 +15,21 @@
 
 .reminder{
   background: #3e6645;
+  position: -webkit-sticky;
   position: sticky;
-  bottom: 103px;
-  left: 90px;
+  /* bottom: 97px; */
+  /* left: 72px; */
   height: 67px;
-  width: 214px;
+  width: 150px;
   font-size: 25px;
   list-style-type: none;
-  color: #98cb32;
+  color: #ffffff;
   border-radius: 21px;
-
+  /* opacity: 0.8; */
+  margin: 4rem;
+  /* padding: 0px; */
+  /* list-style-position: outside; */
+  top: 186px;
 }
 .modal-name{
   color: #4f553e;
@@ -75,3 +80,16 @@ color: #d10808;
   margin-left:20px;
 
 }
+// .background-card-home{
+//   position: sticky;
+//   bottom: 103px;
+//   left: 90px;
+//   height: 67px;
+//   width: 214px;
+//   font-size: 25px;
+//   list-style-type: none;
+//   color: #ffffff;
+//   border-radius: 21px;
+//   opacity: 0.5;
+//   margin: 4rem;
+// }
