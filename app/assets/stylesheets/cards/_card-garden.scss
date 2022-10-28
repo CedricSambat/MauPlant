@@ -65,7 +65,7 @@
   margin-top: 23px;
     margin-left: 22px;
     margin-bottom: 18px;
-  }
+}
 .d-flex{
   justify-content: space-around;
   padding-top: 20px;
@@ -86,13 +86,12 @@
   }
 .background_1{
   height: 231px;
-  }
+}
 .background_l{
  padding-top: 10px;
  height: 620px;
 }
-//seach_garden
-  .seach{
+.seach{
     border-radius: 15px;
     background: rgba(255,255,255, 0.2);
     margin-left: 5px;
@@ -100,17 +99,18 @@
     color:#fdfffe;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 64px;
-  }
-.seach_bar{
-  width: 350px;
-  margin-left: 33px;
-  margin-top: 5px;
 }
+// .seach_bar{
+//   width: 352px;
+//   margin-left: 95px;
+//   margin-top: -41px;
+// }
 .input-seach{
- border-radius: 15px;
-  // outline: 0.5px;
+  border-radius: 9px;
   padding: 24px,24px;
   color: #0a0a0a;
+  width: fit-content;
+  height: 42px;
 
 }
 ::placeholder{
@@ -118,9 +118,17 @@
 }
 //90
 .title_hel{
-  padding-bottom: 25px;
-  margin-left: 25px;
+  padding-bottom: 18px;
+  margin-left: 72px;
   margin-top: 26px;
+}
+.title_hel h1{
+  font-size:55px;
+
+}
+.title_hel h2{
+  font-size: 55px;
+
 }
 
 
