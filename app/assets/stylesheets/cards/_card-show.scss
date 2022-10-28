@@ -7,14 +7,13 @@
 }
 
 .card_g {
-  margin: 10px;
+  margin: 10px auto;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 372px;
+  width: calc(100vw - 32px);
   height: 594px;
-  margin-left: 23px;
 }
 
 .card-header{
