@@ -9,15 +9,17 @@
       </a>
     </li>
      <li class="footer-links">
-      <a href="/plants">
-      <span class ="icon">
-      <i class="fa-sharp fa-solid fa-seedling"></i>
-      </span>
-      <span class ="text">Plants</span>
+      <%# <a href="/plants"> %>
+      <%=link_to plants_path, data:{turbo: false} do %>
+        <span class ="icon">
+        <i class="fa-sharp fa-solid fa-seedling"></i>
+        </span>
+        <span class ="text">Plants</span>
+      <% end %>
       </a>
     </li>
      <li class="footer-links">
-      <a href="/chatrooms/2">
+      <a href="/chatrooms/7">
       <span class ="icon"><i class="fa-solid fa-question"></i>
       </span>
       <span class ="text">Help</span>
