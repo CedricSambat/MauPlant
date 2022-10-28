@@ -1,6 +1,5 @@
 .container_g {
   display: flex;
-  width: 1040px;
   justify-content: space-evenly;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -86,4 +85,7 @@
   margin-left: 52px;
   font-weight: 300;
   justify-content: space-around;
+}
+.trash_1{
+  color: yellowgreen;
 }
