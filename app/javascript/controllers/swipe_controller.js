@@ -10,5 +10,5 @@ export default class extends Controller {
 
   const swiper = new Swiper('.swiper', {
     modules: [Navigation, Pagination],
-
+    slidesPerView: 1.2
   });
